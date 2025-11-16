@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 20% 98%; /* neutral-50 */
+    --foreground: 60 7% 10%; /* neutral-900 */
+    --card: 50 22% 95%; /* neutral-100 */
+    --card-foreground: 60 7% 10%;
+    --popover: 50 22% 95%;
+    --popover-foreground: 60 7% 10%;
+    --primary: 43 86% 38%; /* gold-500 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 50 4% 59%; /* neutral-500 */
+    --secondary-foreground: 60 7% 10%;
+    --muted: 50 22% 95%;
+    --muted-foreground: 50 4% 59%;
+    --accent: 168 48% 33%; /* teal-500 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 18% 89%; /* neutral-200 */
+    --input: 45 18% 89%;
+    --ring: 43 86% 38%;
+    --radius: 12px;
+  }
+
+  * {
+    @apply border-neutral-200;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-sans;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply px-8 py-4 rounded-sm font-sans font-medium text-sm tracking-wider
+           bg-gold-metallic text-white shadow-card
+           transition-all duration-fast ease-standard
+           hover:brightness-110 hover:scale-105 hover:shadow-card-hover
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 rounded-sm font-sans font-medium text-sm tracking-wider
+           border-2 border-neutral-200 text-neutral-700 bg-transparent
+           transition-all duration-fast ease-standard
+           hover:bg-neutral-50 hover:border-gold-500;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-neutral-100 rounded-md shadow-card
+           transition-all duration-standard ease-elegant
+           hover:-translate-y-1 hover:shadow-card-hover;
+  }
+
+  .card-feature {
+    @apply card border-t-4 border-gold-500;
+  }
+}
+
+@layer utilities {
+  /* Container max widths */
+  .container-narrow {
+    @apply max-w-screen-lg mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-screen-2xl mx-auto;
+  }
+
+  /* Section spacing */
+  .section-spacing {
+    @apply py-24;
+  }
+
+  .section-spacing-large {
+    @apply py-32;
+  }
+}
