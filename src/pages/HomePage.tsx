@@ -41,7 +41,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/temple-bg.jpg" 
+            src="/images/sala.jpg" 
             alt="Thai Temple" 
             className="w-full h-full object-cover opacity-40"
           />

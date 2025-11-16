@@ -101,7 +101,7 @@ export default function MonksPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/monks-hero.jpg" 
+            src="/images/Po.jpg" 
             alt="Buddhism and Science" 
             className="w-full h-full object-cover opacity-50"
           />
