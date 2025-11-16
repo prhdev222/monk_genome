@@ -196,6 +196,78 @@ export default function GenomeTechnologyPage() {
                 เมื่อมนุษย์สามารถควบคุมยีนส์พันธุกรรมได้
               </p>
             </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                คะแนนความเสี่ยงทางพันธุกรรม
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/npWVUCYRBVQ"
+                  title="คะแนนความเสี่ยงทางพันธุกรรมที่คำนวณจากยีนหลายตัว"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                คะแนนความเสี่ยงทางพันธุกรรมที่คำนวณจากยีนหลายตัว
+              </p>
+            </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                เภสัชพันธุศาสตร์
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/9wwjHHr3WdM"
+                  title="เภสัชพันธุศาสตร์"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                เภสัชพันธุศาสตร์: การเลือกยาและปรับขนาดให้เหมาะสมตามพันธุกรรม
+              </p>
+            </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                ป้องกันมะเร็งด้วยการตรวจยีน
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/fe5QEfQO2u8"
+                  title="ป้องกันมะเร็ง เพิ่มทางเลือกรักษา ด้วยการตรวจยีนความเสี่ยง"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                ป้องกันมะเร็ง เพิ่มทางเลือกรักษา ด้วยการตรวจยีนความเสี่ยง
+              </p>
+            </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                ATMPs จักรวาลยาใหม่
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/3fzw-0chRPw"
+                  title="ATMPs จักรวาลยาใหม่ เมื่อเซลล์คือยา ฆ่ามะเร็ง ยืดอายุ"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                ATMPs จักรวาลยาใหม่ เมื่อเซลล์คือยา ฆ่ามะเร็ง ยืดอายุ
+              </p>
+            </div>
           </div>
 
           {/* Additional Learning Resources */}
