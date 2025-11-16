@@ -199,19 +199,19 @@ export default function GenomeTechnologyPage() {
 
             <div className="card-feature p-6">
               <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
-                คะแนนความเสี่ยงทางพันธุกรรม
+                Microbiome ความหวังใหม่
               </h3>
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-md"
-                  src="https://www.youtube.com/embed/npWVUCYRBVQ"
-                  title="คะแนนความเสี่ยงทางพันธุกรรมที่คำนวณจากยีนหลายตัว"
+                  src="https://www.youtube.com/embed/DaN2WvxkrnQ"
+                  title="Microbiome ความหวังใหม่ในการป้องกันโรคร้าย"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
               </div>
               <p className="text-sm text-neutral-600 mt-4">
-                คะแนนความเสี่ยงทางพันธุกรรมที่คำนวณจากยีนหลายตัว
+                Microbiome ความหวังใหม่ในการป้องกันโรคร้าย
               </p>
             </div>
 
