@@ -66,26 +66,16 @@ export default function HomePage() {
       {/* Mission Statement */}
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-6 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
-                พันธกิจของโครงการ
-              </h2>
-              <p className="text-body text-neutral-700 leading-relaxed mb-4">
-                โครงการนี้มุ่งเน้นการนำเสนอความรู้เกี่ยวกับพระพุทธศาสนาและวิทยาศาสตร์ พร้อมทั้งเชื่อมโยงกับเทคโนโลยีการแพทย์ขั้นสูงในยุคปัจจุบัน
-              </p>
-              <p className="text-body text-neutral-700 leading-relaxed">
-                เราเชื่อว่าการผสมผสานระหว่างภูมิปัญญาทางพุทธศาสนาและวิทยาศาสตร์การแพทย์สมัยใหม่ จะนำไปสู่การดูแลสุขภาพที่สมดุลและยั่งยืน
-              </p>
-            </div>
-            <div>
-              <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
-                ขอบเขตการวิจัย
-              </h2>
-              <p className="text-body text-neutral-700 leading-relaxed mb-4">
-                การวิจัยครอบคลุมสี่ด้านหลัก: พระพุทธศาสนาและหลักวิทยาศาสตร์ เทคโนโลยีการตรวจจีโนมและการทำนายโรค NCD แนวทางการป้องกันโรคเชิงรุกผ่านการปรับเปลี่ยนวิถีชีวิต และตัวอย่างการประยุกต์ใช้จริงในประเทศไทยและต่างประเทศ
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
+              พันธกิจของโครงการ
+            </h2>
+            <p className="text-body text-neutral-700 leading-relaxed mb-4">
+              โครงการนี้มุ่งเน้นการนำเสนอความรู้เกี่ยวกับพระพุทธศาสนาและวิทยาศาสตร์ พร้อมทั้งเชื่อมโยงกับเทคโนโลยีการแพทย์ขั้นสูงในยุคปัจจุบัน
+            </p>
+            <p className="text-body text-neutral-700 leading-relaxed">
+              เราเชื่อว่าการผสมผสานระหว่างภูมิปัญญาทางพุทธศาสนาและวิทยาศาสตร์การแพทย์สมัยใหม่ จะนำไปสู่การดูแลสุขภาพที่สมดุลและยั่งยืน
+            </p>
           </div>
         </div>
       </section>
