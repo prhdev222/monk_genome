@@ -78,7 +78,7 @@ export default function PreventiveCarePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/wellness-hero.jpg" 
+            src="/images/Pai.png" 
             alt="Health and Wellness" 
             className="w-full h-full object-cover opacity-45"
           />

@@ -29,7 +29,7 @@ export default function GenomeTechnologyPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/genome-hero.jpg" 
+            src="/images/NGS.jpg" 
             alt="DNA Genome Technology" 
             className="w-full h-full object-cover opacity-40"
           />
