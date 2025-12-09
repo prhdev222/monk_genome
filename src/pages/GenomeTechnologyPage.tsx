@@ -286,6 +286,24 @@ export default function GenomeTechnologyPage() {
                 จีโนมิกส์ไทยแลนด์ สิทธิสุขภาพคนไทยและการแพทย์แห่งอนาคต
               </p>
             </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                รู้จัก 'CAR-T Cell' ความหวังใหม่รักษาโรคมะเร็ง
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/SEogSo-PT54"
+                  title="รู้จัก 'CAR-T Cell' ความหวังใหม่รักษาโรคมะเร็ง"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                รู้จัก 'CAR-T Cell' ความหวังใหม่รักษาโรคมะเร็ง
+              </p>
+            </div>
           </div>
 
           {/* Additional Learning Resources */}
