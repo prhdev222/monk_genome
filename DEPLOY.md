@@ -107,3 +107,6 @@
 - GitHub Pages จะ build ด้วย base path `/monk_genome/`
 - ไฟล์ `404.html` ใช้สำหรับ GitHub Pages เท่านั้น
 
+
+
+

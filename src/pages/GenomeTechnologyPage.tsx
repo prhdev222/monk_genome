@@ -268,6 +268,24 @@ export default function GenomeTechnologyPage() {
                 ATMPs จักรวาลยาใหม่ เมื่อเซลล์คือยา ฆ่ามะเร็ง ยืดอายุ
               </p>
             </div>
+
+            <div className="card-feature p-6">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                จีโนมิกส์ไทยแลนด์ สิทธิสุขภาพคนไทยและการแพทย์แห่งอนาคต
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/Rci2Vecpn8M"
+                  title="จีโนมิกส์ไทยแลนด์ สิทธิสุขภาพคนไทยและการแพทย์แห่งอนาคต"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-neutral-600 mt-4">
+                จีโนมิกส์ไทยแลนด์ สิทธิสุขภาพคนไทยและการแพทย์แห่งอนาคต
+              </p>
+            </div>
           </div>
 
           {/* Additional Learning Resources */}
