@@ -525,9 +525,6 @@ export default function GenomeTechnologyPage() {
               src="/multiomic.png" 
               alt="Multi-omics technology: Proactive health care for Thai monks" 
               className="w-full sm:w-auto sm:max-w-[95vw] h-auto sm:max-h-[90vh] object-contain rounded-lg"
-              style={{ 
-                imageRendering: 'crisp-edges' as const
-              }}
             />
           </div>
         </div>
