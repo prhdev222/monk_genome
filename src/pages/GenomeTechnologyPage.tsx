@@ -1,26 +1,8 @@
-import { ExternalLink, BookOpen } from 'lucide-react'
+import { ExternalLink, BookOpen, X } from 'lucide-react'
+import { useState } from 'react'
 
 export default function GenomeTechnologyPage() {
-  const technologies = [
-    {
-      name: 'WGS (Whole Genome Sequencing)',
-      description: 'การจัดลำดับจีโนมทั้งหมด ครอบคลุมทั้งบริเวณเข้ารหัสและไม่เข้ารหัส',
-      pros: 'ตรวจจับความแปรปรวนได้ครบถ้วน รวมถึง structural variants',
-      cons: 'ต้นทุนสูงกว่า ข้อมูลซับซ้อน ต้องการความเชี่ยวชาญในการแปลผล',
-    },
-    {
-      name: 'WES (Whole Exome Sequencing)',
-      description: 'การจัดลำดับเฉพาะบริเวณ exome (ประมาณ 1-2% ของจีโนม)',
-      pros: 'คุ้มค่า มุ่งเป้าบริเวณที่ก่อโรคส่วนใหญ่ ข้อมูลจัดการง่ายกว่า',
-      cons: 'อาจพลาด structural variants และ regulatory regions',
-    },
-    {
-      name: 'Targeted Panels',
-      description: 'การตรวจเฉพาะยีนหรือเส้นทางที่เกี่ยวข้องกับโรคเป้าหมาย',
-      pros: 'ให้ความลึกสูง ราคาเหมาะสม เหมาะกับการตรวจเฉพาะโรค',
-      cons: 'ครอบคลุมจำกัด ขึ้นกับการเลือกยีน',
-    },
-  ]
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen">
@@ -41,7 +23,7 @@ export default function GenomeTechnologyPage() {
             เทคโนโลยีการแพทย์ยุคใหม่
           </h1>
           <p className="font-sans text-lg lg:text-xl text-neutral-100 max-w-2xl mx-auto drop-shadow-md">
-            Genome Testing และการทำนายโรค NCD ด้วย AI และ Machine Learning
+            Multi-omics และการทำนายโรค NCD ด้วย AI และ Machine Learning
           </p>
         </div>
       </section>
@@ -54,60 +36,177 @@ export default function GenomeTechnologyPage() {
               บทสรุป
             </h2>
             <p className="text-body text-neutral-700 leading-relaxed mb-4">
-              เทคโนโลยีการจัดลำดับจีโนมกำลังเปลี่ยนผ่านจากการรักษาแบบเดียวสำหรับทุกคน
-              ไปสู่การดูแลแบบเฉพาะบุคคลที่อาศัยข้อมูลจีโนมและโอมิกส์ร่วมกับปัจจัยทางคลินิก
-              พฤติกรรม และสิ่งแวดล้อม
+              พระสงฆ์ไทยมีความเสี่ยงสูงต่อโรคไม่ติดต่อเรื้อรัง (NCDs) เนื่องจากวิถีชีวิตที่ได้รับอาหารจากการบิณฑบาต
+              ซึ่งมักมีรสหวาน มัน และเค็ม ส่งผลให้เกิดความเสี่ยงต่อโรคหัวใจและหลอดเลือด โรคสมองเสื่อม
+              ความดันโลหิตสูง และเบาหวาน
             </p>
+            <p className="text-body text-neutral-700 leading-relaxed mb-4">
+              เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุกของพระสงฆ์ไทยเป็นการบูรณาการข้อมูลความเสี่ยง 2 มิติ:
+            </p>
+            <ul className="text-body text-neutral-700 leading-relaxed mb-4 space-y-2 ml-6">
+              <li className="list-disc">
+                <strong>ความเสี่ยงคงที่ (Static Risk):</strong> การใช้ Whole Genome Sequencing (WGS) 
+                เพื่อค้นหาความเสี่ยงโรคทางพันธุกรรมที่ถ่ายทอดมาตั้งแต่เกิด
+              </li>
+              <li className="list-disc">
+                <strong>ความเสี่ยงพลวัต (Dynamic Risk):</strong> การตรวจ Biomarker เพื่อประเมินผลกระทบ
+                จากวิถีชีวิตและโภชนาการในปัจจุบัน เช่น pTau217 (ความเสี่ยงโรคอัลไซเมอร์), 
+                TMAO (ความเสี่ยงโรคหัวใจและหลอดเลือดจากจุลินทรีย์ในลำไส้), และ DNA Methylation 
+                (ความเสี่ยงมะเร็งลำไส้ระยะเริ่มต้น)
+              </li>
+            </ul>
             <p className="text-body text-neutral-700 leading-relaxed">
-              แกนของการเปลี่ยนผ่านนี้คือเทคโนโลยี NGS ที่ช่วยให้เราอ่านลำดับ DNA ได้ลึก
-              ครอบคลุม และตรงจุดยิ่งขึ้น สำหรับการวินิจฉัยโรคหายาก มะเร็ง
-              และการป้องกันโรคไม่ติดต่อเรื้อรัง
+              การรวมข้อมูลทั้งสองมิตินี้ทำให้สามารถให้การดูแลสุขภาพที่แม่นยำและเฉพาะบุคคล 
+              เพื่อป้องกันและจัดการโรค NCDs ได้อย่างมีประสิทธิภาพ
             </p>
           </div>
         </div>
       </section>
 
-      {/* Technology Comparison */}
+      {/* Multi-omics Infographic */}
       <section className="section-spacing bg-neutral-50">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-4">
+              เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุกของพระสงฆ์ไทย
+            </h2>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="card p-8 lg:p-12">
+              <img 
+                src="/multiomic.png" 
+                alt="Multi-omics technology: Proactive health care for Thai monks" 
+                className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setIsImageModalOpen(true)}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Biomarker Testing Details */}
+      <section className="section-spacing bg-white">
         <div className="container mx-auto px-6 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-4">
-              เปรียบเทียบเทคโนโลยี
+              การตรวจ Biomarker สำคัญ
             </h2>
-            <p className="text-body text-neutral-700">
-              WGS vs WES vs Targeted Sequencing
+            <p className="text-body text-neutral-700 max-w-3xl mx-auto">
+              ตัวอย่าง ตัวบ่งชี้ทางชีวภาพสำหรับการประเมินความเสี่ยงโรคและการดูแลสุขภาพเชิงรุก
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="card p-8">
-                <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
-                  {tech.name}
-                </h3>
-                <p className="text-body text-neutral-700 mb-6 leading-relaxed">
-                  {tech.description}
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <div className="text-sm font-sans font-medium text-teal-700 mb-2">
-                      ข้อดี
-                    </div>
-                    <p className="text-sm text-neutral-700 leading-relaxed">
-                      {tech.pros}
-                    </p>
-                  </div>
-                  <div>
-                    <div className="text-sm font-sans font-medium text-neutral-500 mb-2">
-                      ข้อจำกัด
-                    </div>
-                    <p className="text-sm text-neutral-700 leading-relaxed">
-                      {tech.cons}
-                    </p>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* pTau217 */}
+            <div className="card p-8 border-l-4 border-teal-500">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                การตรวจ pTau217
+              </h3>
+              <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                ตัวบ่งชี้โรคอัลไซเมอร์และความเสื่อมของสมอง
+              </p>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                การตรวจวัดระดับโปรตีน pTau217 ในเลือดหรือน้ำไขสันหลังช่วยในการวินิจฉัยโรคอัลไซเมอร์
+                และประเมินความเสี่ยงต่อการเสื่อมของสมองได้ตั้งแต่ระยะเริ่มต้น
+              </p>
+            </div>
+
+            {/* TMAO */}
+            <div className="card p-8 border-l-4 border-red-500">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                การตรวจ TMAO
+              </h3>
+              <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                ตัวบ่งชี้โรคหัวใจและหลอดเลือด
+              </p>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                การตรวจวัดระดับ TMAO (Trimethylamine N-oxide) ในเลือดช่วยประเมินความเสี่ยงต่อโรคหัวใจ
+                และหลอดเลือด โดย TMAO เกิดจากการย่อยสลายสารอาหารโดยจุลินทรีย์ในลำไส้
+              </p>
+            </div>
+
+            {/* DNA Methylation */}
+            <div className="card p-8 border-l-4 border-navy-500">
+              <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                การตรวจคัดกรองมะเร็งลำไส้ด้วย DNA Methylation
+              </h3>
+              <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                การตรวจหาการเปลี่ยนแปลงของ DNA Methylation
+              </p>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                การตรวจคัดกรองมะเร็งลำไส้โดยการวิเคราะห์รูปแบบ DNA Methylation ในตัวอย่างอุจจาระ
+                ช่วยในการตรวจพบมะเร็งลำไส้ระยะเริ่มต้นได้อย่างแม่นยำและไม่รุกราน
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WGS Technology Explanation */}
+      <section className="section-spacing bg-neutral-50">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8 lg:p-12 border-l-4 border-navy-500">
+              <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
+                WGS (Whole Genome Sequencing)
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                    WGS คืออะไร?
+                  </h3>
+                  <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                    <strong>Whole Genome Sequencing (WGS)</strong> หรือ <strong>การจัดลำดับจีโนมทั้งหมด</strong> 
+                    เป็นเทคโนโลยีการจัดลำดับดีเอ็นเอที่ครอบคลุมทั้งจีโนมของสิ่งมีชีวิต 
+                    รวมถึงบริเวณที่เข้ารหัสโปรตีน (coding regions) และบริเวณที่ไม่เข้ารหัสโปรตีน (non-coding regions)
+                  </p>
+                  <p className="text-body text-neutral-700 leading-relaxed">
+                    เทคโนโลยีนี้ช่วยให้เราสามารถอ่านและวิเคราะห์ข้อมูลพันธุกรรมทั้งหมดของบุคคลได้อย่างครบถ้วน 
+                    ซึ่งครอบคลุมประมาณ 3 พันล้านคู่เบสในมนุษย์
+                  </p>
+                </div>
+                
+                <div className="bg-navy-50 p-6 rounded-md">
+                  <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                    ข้อดีของ WGS
+                  </h3>
+                  <ul className="space-y-3 text-body text-neutral-700">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-navy-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>ตรวจจับความแปรปรวนทางพันธุกรรมได้ครบถ้วน รวมถึง structural variants, copy number variations (CNVs), และ inversions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-navy-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>ครอบคลุมทั้งบริเวณที่เข้ารหัสและไม่เข้ารหัส ซึ่งอาจมีข้อมูลสำคัญเกี่ยวกับการควบคุมยีน</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-navy-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>ให้ข้อมูลที่สมบูรณ์ที่สุดสำหรับการวิเคราะห์ทางพันธุกรรมและการแพทย์แม่นยำ</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-navy-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>สามารถใช้ในการค้นพบยีนใหม่ที่เกี่ยวข้องกับโรคและการตอบสนองต่อยา</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-neutral-50 p-6 rounded-md">
+                  <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                    การประยุกต์ใช้
+                  </h3>
+                  <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                    WGS ถูกนำมาใช้ในการแพทย์แม่นยำเพื่อ:
+                  </p>
+                  <ul className="space-y-2 text-body text-neutral-700 ml-6">
+                    <li className="list-disc">การวินิจฉัยโรคหายากและโรคพันธุกรรม</li>
+                    <li className="list-disc">การทำนายความเสี่ยงต่อโรคไม่ติดต่อเรื้อรัง (NCDs)</li>
+                    <li className="list-disc">การเลือกยาและปรับขนาดยาตามพันธุกรรม (Pharmacogenomics)</li>
+                    <li className="list-disc">การตรวจหามะเร็งและการติดตามการรักษา</li>
+                    <li className="list-disc">การวิจัยและค้นพบยีนใหม่ที่เกี่ยวข้องกับโรค</li>
+                  </ul>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -120,7 +219,7 @@ export default function GenomeTechnologyPage() {
               เกี่ยวกับความรู้
             </h2>
             <p className="text-body text-neutral-700">
-              วิดีโอความรู้เกี่ยวกับเทคโนโลยี Genome และการแพทย์ยุคใหม่
+              วิดีโอความรู้เกี่ยวกับเทคโนโลยี Multi-omics และการแพทย์ยุคใหม่
             </p>
           </div>
 
@@ -352,7 +451,7 @@ export default function GenomeTechnologyPage() {
       <section className="section-spacing-large bg-navy-50">
         <div className="container-narrow px-6 lg:px-16 text-center">
           <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
-            Precision Medicine
+            Precision & Personalized Medicine
           </h2>
           <p className="text-body-lg text-neutral-700 leading-relaxed mb-12">
             การแพทย์แม่นยำใช้ข้อมูลจีโนม ข้อมูลคลินิก และข้อมูลสิ่งแวดล้อม
@@ -404,6 +503,36 @@ export default function GenomeTechnologyPage() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {isImageModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 overflow-auto"
+          onClick={() => setIsImageModalOpen(false)}
+        >
+          <button
+            onClick={() => setIsImageModalOpen(false)}
+            className="fixed top-3 right-3 sm:top-4 sm:right-4 z-20 bg-white rounded-full p-2.5 sm:p-3 hover:bg-neutral-100 transition-colors shadow-lg"
+            aria-label="ปิด"
+          >
+            <X size={22} className="sm:w-6 sm:h-6 text-neutral-900" />
+          </button>
+          <div 
+            className="min-h-full flex items-center justify-center p-3 sm:p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src="/multiomic.png" 
+              alt="Multi-omics technology: Proactive health care for Thai monks" 
+              className="w-full sm:w-auto sm:max-w-[95vw] h-auto sm:max-h-[90vh] object-contain rounded-lg"
+              style={{ 
+                imageRendering: 'crisp-edges',
+                WebkitImageRendering: 'crisp-edges'
+              }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

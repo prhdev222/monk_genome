@@ -18,9 +18,9 @@ export default function HomePage() {
     },
     {
       icon: Activity,
-      title: 'Genome Testing',
+      title: 'Multi-omics',
       description:
-        'เทคโนโลยีการจัดลำดับจีโนมและการทำนายโรค NCD ด้วย AI และ Machine Learning สำหรับการแพทย์แม่นยำ',
+        'เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุก รวมถึงการจัดลำดับจีโนมและการตรวจ Biomarker สำหรับการแพทย์แม่นยำ',
       color: 'navy',
       link: '/genome-technology',
     },
@@ -53,7 +53,7 @@ export default function HomePage() {
             {page?.hero_title_th || 'พระสงฆ์ไทยกับการแพทย์ยุคใหม่'}
           </h1>
           <p className="font-sans text-xl lg:text-body-lg text-neutral-100 max-w-3xl mx-auto mb-8 lg:mb-12 leading-relaxed drop-shadow-md">
-            {page?.hero_subtitle_th || 'Genome Testing และการป้องกันโรค NCD'}
+            {page?.hero_subtitle_th || 'Multi-omics และการป้องกันโรค NCD'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/monks" className="btn-primary inline-block">
@@ -68,7 +68,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
-              พันธกิจของโครงการ
+              พันธกิจของโครงการนี้
             </h2>
             <p className="text-body text-neutral-700 leading-relaxed mb-4">
               โครงการนี้มุ่งเน้นการนำเสนอความรู้เกี่ยวกับพระพุทธศาสนาและวิทยาศาสตร์ พร้อมทั้งเชื่อมโยงกับเทคโนโลยีการแพทย์ขั้นสูงในยุคปัจจุบัน
@@ -85,7 +85,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-4">
-              สามเสาหลักของโครงการ
+              สามเสาหลักของโครงการนี้
             </h2>
             <p className="text-body text-neutral-700 max-w-2xl mx-auto">
               การบูรณาการความรู้จากสามด้านเพื่อความเข้าใจที่ครบถ้วนและสมดุล

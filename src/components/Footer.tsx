@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <p className="text-neutral-300 text-sm leading-relaxed">
               โครงการเผยแพร่ความรู้เกี่ยวกับบทบาทของพระสงฆ์ไทยในการแพทย์
-              และเทคโนโลยี Genome Testing เพื่อการป้องกันโรค NCD
+              และเทคโนโลยี Multi-omics เพื่อการป้องกันโรค NCD
             </p>
           </div>
 
@@ -65,10 +65,10 @@ export default function Footer() {
             <h3 className="font-serif font-semibold text-lg mb-6">หัวข้อที่น่าสนใจ</h3>
             <ul className="space-y-3">
               <li className="text-neutral-300 text-sm">ธรรมนามัย</li>
-              <li className="text-neutral-300 text-sm">Genome Sequencing</li>
+              <li className="text-neutral-300 text-sm">Multi-omics</li>
               <li className="text-neutral-300 text-sm">โรค NCD</li>
               <li className="text-neutral-300 text-sm">การป้องกันเชิงรุก</li>
-              <li className="text-neutral-300 text-sm">Precision Medicine</li>
+              <li className="text-neutral-300 text-sm">Precision & Personalized Medicine</li>
             </ul>
           </div>
 
