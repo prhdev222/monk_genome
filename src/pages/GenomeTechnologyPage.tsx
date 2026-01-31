@@ -71,8 +71,8 @@ export default function GenomeTechnologyPage() {
               เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุกของพระสงฆ์ไทย
             </h2>
           </div>
-          <div className="max-w-5xl mx-auto">
-            <div className="card p-8 lg:p-12">
+          <div className="max-w-7xl mx-auto">
+            <div className="card p-4 sm:p-6 lg:p-8">
               <img 
                 src="/multiomic.png" 
                 alt="Multi-omics technology: Proactive health care for Thai monks" 
