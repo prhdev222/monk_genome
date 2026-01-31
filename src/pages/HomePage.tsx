@@ -68,13 +68,13 @@ export default function HomePage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
-              พันธกิจของโครงการนี้
+              พันธกิจของwebsiteนี้
             </h2>
             <p className="text-body text-neutral-700 leading-relaxed mb-4">
-              โครงการนี้มุ่งเน้นการนำเสนอความรู้เกี่ยวกับพระพุทธศาสนาและวิทยาศาสตร์ พร้อมทั้งเชื่อมโยงกับเทคโนโลยีการแพทย์ขั้นสูงในยุคปัจจุบัน
+              มุ่งเน้นถวายความรู้แก่พระคุณเจ้าโดยนำเสนอความรู้เกี่ยวกับพระพุทธศาสนาและวิทยาศาสตร์ พร้อมทั้งเชื่อมโยงกับเทคโนโลยีการแพทย์ขั้นสูงในยุคปัจจุบัน
             </p>
             <p className="text-body text-neutral-700 leading-relaxed">
-              เราเชื่อว่าการผสมผสานระหว่างภูมิปัญญาทางพุทธศาสนาและวิทยาศาสตร์การแพทย์สมัยใหม่ จะนำไปสู่การดูแลสุขภาพที่สมดุลและยั่งยืน
+              การผสมผสานระหว่างภูมิปัญญาทางพุทธศาสนาและวิทยาศาสตร์การแพทย์สมัยใหม่ จะนำไปสู่การดูแลสุขภาพที่สมดุลและยั่งยืน
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-4">
-              สามเสาหลักของโครงการนี้
+              สามเสาหลัก
             </h2>
             <p className="text-body text-neutral-700 max-w-2xl mx-auto">
               การบูรณาการความรู้จากสามด้านเพื่อความเข้าใจที่ครบถ้วนและสมดุล

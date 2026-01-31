@@ -32,14 +32,6 @@ export default function GenomeTechnologyPage() {
       <section className="section-spacing bg-white">
         <div className="container-narrow px-6 lg:px-16">
           <div className="card p-8 lg:p-12 border-l-4 border-navy-500">
-            <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-6">
-              บทสรุป
-            </h2>
-            <p className="text-body text-neutral-700 leading-relaxed mb-4">
-              พระสงฆ์ไทยมีความเสี่ยงสูงต่อโรคไม่ติดต่อเรื้อรัง (NCDs) เนื่องจากวิถีชีวิตที่ได้รับอาหารจากการบิณฑบาต
-              ซึ่งมักมีรสหวาน มัน และเค็ม ส่งผลให้เกิดความเสี่ยงต่อโรคหัวใจและหลอดเลือด โรคสมองเสื่อม
-              ความดันโลหิตสูง และเบาหวาน
-            </p>
             <p className="text-body text-neutral-700 leading-relaxed mb-4">
               เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุกของพระสงฆ์ไทยเป็นการบูรณาการข้อมูลความเสี่ยง 2 มิติ:
             </p>
