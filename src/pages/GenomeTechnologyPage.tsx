@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 export default function GenomeTechnologyPage() {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false)
+  const [modalImageSrc, setModalImageSrc] = useState('/multiomic.png')
 
   return (
     <div className="min-h-screen">
@@ -32,24 +33,71 @@ export default function GenomeTechnologyPage() {
       <section className="section-spacing bg-white">
         <div className="container-narrow px-6 lg:px-16">
           <div className="card p-8 lg:p-12 border-l-4 border-navy-500">
+            <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-4">
+              เทคโนโลยี Multi-omics: การตรวจสุขภาพเชิงลึกเพื่อป้องกันโรค NCDs
+            </h2>
             <p className="text-body text-neutral-700 leading-relaxed mb-4">
-              เทคโนโลยี Multi-omics สำหรับการดูแลสุขภาพเชิงรุกของพระสงฆ์ไทยเป็นการบูรณาการข้อมูลความเสี่ยง 2 มิติ:
+              <strong>หลักการของเทคโนโลยี Multi-omics</strong> เปรียบเสมือน "การตรวจสอบอาคารแห่งชีวิต" ในสองมิติ
+              เพื่อทำความเข้าใจธาตุขันธ์ร่างกายของเราในระดับลึก โดยแบ่งการตรวจออกเป็น 2 ส่วนสำคัญ คือ
             </p>
-            <ul className="text-body text-neutral-700 leading-relaxed mb-4 space-y-2 ml-6">
-              <li className="list-disc">
-                <strong>ความเสี่ยงคงที่ (Static Risk):</strong> การใช้ Whole Genome Sequencing (WGS) 
-                เพื่อค้นหาความเสี่ยงโรคทางพันธุกรรมที่ถ่ายทอดมาตั้งแต่เกิด
+            <ol className="text-body text-neutral-700 leading-relaxed mb-4 space-y-4 ml-6 list-decimal">
+              <li>
+                <strong>การตรวจสอบ "พิมพ์เขียวดั้งเดิม" ที่ได้รับมาแต่กำเนิด (Genomics/Static Risk)</strong>
+                <p className="mt-2">
+                  คือการตรวจรหัสพันธุกรรม (WGS) เพื่อทราบว่าแผนผังของอาคารร่างกายที่เราได้รับมานี้มีโครงสร้างอย่างไร
+                  มีจุดแข็งหรือจุดที่อาจมีความเปราะบางตรงไหนบ้าง เปรียบเหมือนการดูพิมพ์เขียวต้นฉบับของอาคารว่ามีฐานรากและเสาเข็มแข็งแรงเพียงใด
+                </p>
+                <div className="mt-3 overflow-hidden rounded-lg">
+                  <img src="/images/MAP.png" alt="พิมพ์เขียวดั้งเดิม" className="w-full h-40 object-cover" />
+                </div>
+                <p className="mt-3 font-semibold">วิธีการตรวจ ได้แก่:</p>
+                <ul className="mt-2 space-y-1 ml-6 list-disc">
+                  <li>WGS (Whole Genome Sequencing): อ่านรหัสพันธุกรรมทั้งชุด</li>
+                  <li>WES (Whole Exome Sequencing): อ่านเฉพาะส่วนที่สร้างโปรตีน</li>
+                  <li>PCR: ตรวจยีนหรือตำแหน่งเฉพาะจุด</li>
+                </ul>
+                <p className="mt-3 font-semibold">การแปลผล มี 2 แบบ:</p>
+                <ul className="mt-2 space-y-1 ml-6 list-disc">
+                  <li>
+                    <strong>Monogenic (ยีนเดี่ยว):</strong> ตรวจว่ายีนตัวใดตัวหนึ่งมีความผิดปกติชัดเจนหรือไม่ ซึ่งอาจส่งผลให้มีความเสี่ยงต่อโรคบางชนิดสูงกว่าคนทั่วไป
+                  </li>
+                  <li>
+                    <strong>Polygenic (กลุ่มยีน):</strong> นำข้อมูลจากยีนหลายตัวมาคำนวณร่วมกัน เพื่อประเมินความเสี่ยงสะสมต่อโรคเรื้อรัง เช่น เบาหวาน ความดันโลหิตสูง
+                  </li>
+                </ul>
               </li>
-              <li className="list-disc">
-                <strong>ความเสี่ยงพลวัต (Dynamic Risk):</strong> การตรวจ Biomarker เพื่อประเมินผลกระทบ
-                จากวิถีชีวิตและโภชนาการในปัจจุบัน เช่น pTau217 (ความเสี่ยงโรคอัลไซเมอร์), 
-                TMAO (ความเสี่ยงโรคหัวใจและหลอดเลือดจากจุลินทรีย์ในลำไส้), และ DNA Methylation 
-                (ความเสี่ยงมะเร็งลำไส้ระยะเริ่มต้น)
+              <li>
+                <strong>การตรวจสอบ "สภาพอาคารปัจจุบัน" จากการใช้งาน (Biomarkers/Dynamic Risk)</strong>
+                <p className="mt-2">
+                  คือการตรวจวัดสารต่างๆ ในร่างกาย เพื่อดูว่าอาคารร่างกายที่เราอาศัยอยู่นี้ จากการใช้งานมาตลอด
+                  (การฉันภัตตาหาร การใช้ชีวิต) ปัจจุบันมีรอยร้าวตรงไหนบ้างหรือไม่ มีสนิมเกาะที่โครงสร้างหรือเปล่า ท่อน้ำอุดตันหรือไม่
+                </p>
+                <div className="mt-3 overflow-hidden rounded-lg">
+                  <img src="/images/crack-inspection.jpg" alt="สภาพอาคารปัจจุบัน" className="w-full h-40 object-cover" />
+                </div>
+                <p className="mt-3 font-semibold">ตัวอย่างการตรวจสารบ่งชี้ เช่น:</p>
+                <ul className="mt-2 space-y-1 ml-6 list-disc">
+                  <li>TMAO: เปรียบเสมือนการตรวจดูท่อน้ำ-สัญญาณความเสี่ยงต่อโรคหัวใจและหลอดเลือด</li>
+                  <li>pTau217: เปรียบเสมือนการตรวจระบบไฟฟ้า-สารที่เกี่ยวข้องกับภาวะสมองเสื่อม</li>
+                  <li>DNA methylation จากอุจจาระ: เปรียบเสมือนการตรวจผนัง-ช่วยคัดกรองความเสี่ยงมะเร็งลำไส้ในระยะเริ่มต้น</li>
+                </ul>
               </li>
+            </ol>
+            <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-3">
+              ประโยชน์ของการนำข้อมูลทั้งสองมิติมาใช้ร่วมกัน
+            </h3>
+            <p className="text-body text-neutral-700 leading-relaxed mb-3">
+              เมื่อนำข้อมูลทั้งจาก "พิมพ์เขียวดั้งเดิม" และ "สภาพอาคารปัจจุบัน" มาพิจารณาร่วมกัน ก็เหมือนกับการมีแผนผังต้นฉบับ
+              และรายงานการตรวจสอบสภาพอาคารปัจจุบันครบถ้วน ทำให้สามารถ:
+            </p>
+            <ul className="text-body text-neutral-700 leading-relaxed space-y-2 ml-6 list-disc">
+              <li>เข้าใจจุดอ่อนโครงสร้างของแต่ละบุคคลได้ชัดเจนยิ่งขึ้น</li>
+              <li>ซ่อมแซมและบำรุงรักษาอาคารได้ตรงจุดก่อนที่จะพังทลาย (ป้องกันโรค NCDs)</li>
+              <li>วางแผนดูแลบำรุงรักษาที่เหมาะสมเฉพาะตัวอาคาร</li>
+              <li>ปรับเปลี่ยนการใช้งานให้เหมาะสมกับความทนทานของอาคาร</li>
             </ul>
-            <p className="text-body text-neutral-700 leading-relaxed">
-              การรวมข้อมูลทั้งสองมิตินี้ทำให้สามารถให้การดูแลสุขภาพที่แม่นยำและเฉพาะบุคคล 
-              เพื่อป้องกันและจัดการโรค NCDs ได้อย่างมีประสิทธิภาพ
+            <p className="text-body text-neutral-700 leading-relaxed mt-4">
+              เทคโนโลยีนี้จึงเป็นเครื่องมือสำคัญในการดูแลสุขภาพเชิงป้องกัน และการดูแลธาตุขันธ์ให้สมดุล
             </p>
           </div>
         </div>
@@ -69,7 +117,10 @@ export default function GenomeTechnologyPage() {
                 src="/multiomic.png" 
                 alt="Multi-omics technology: Proactive health care for Thai monks" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                onClick={() => setIsImageModalOpen(true)}
+                onClick={() => {
+                  setModalImageSrc('/multiomic.png')
+                  setIsImageModalOpen(true)
+                }}
               />
             </div>
           </div>
@@ -91,6 +142,17 @@ export default function GenomeTechnologyPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* pTau217 */}
             <div className="card p-8 border-l-4 border-teal-500">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="/images/Ptau217.png"
+                  alt="pTau217 biomarker"
+                  className="w-full h-32 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => {
+                    setModalImageSrc('/images/Ptau217.png')
+                    setIsImageModalOpen(true)
+                  }}
+                />
+              </div>
               <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
                 การตรวจ pTau217
               </h3>
@@ -105,6 +167,17 @@ export default function GenomeTechnologyPage() {
 
             {/* TMAO */}
             <div className="card p-8 border-l-4 border-red-500">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="/images/TMAO.png"
+                  alt="TMAO biomarker"
+                  className="w-full h-32 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => {
+                    setModalImageSrc('/images/TMAO.png')
+                    setIsImageModalOpen(true)
+                  }}
+                />
+              </div>
               <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
                 การตรวจ TMAO
               </h3>
@@ -119,6 +192,17 @@ export default function GenomeTechnologyPage() {
 
             {/* DNA Methylation */}
             <div className="card p-8 border-l-4 border-navy-500">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="/images/DNAMethylation.jpg"
+                  alt="DNA Methylation screening"
+                  className="w-full h-32 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => {
+                    setModalImageSrc('/images/DNAMethylation.jpg')
+                    setIsImageModalOpen(true)
+                  }}
+                />
+              </div>
               <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
                 การตรวจคัดกรองมะเร็งลำไส้ด้วย DNA Methylation
               </h3>
@@ -513,9 +597,9 @@ export default function GenomeTechnologyPage() {
             className="min-h-full flex items-center justify-center p-3 sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <img 
-              src="/multiomic.png" 
-              alt="Multi-omics technology: Proactive health care for Thai monks" 
+            <img
+              src={modalImageSrc}
+              alt="Expanded view"
               className="w-full sm:w-auto sm:max-w-[95vw] h-auto sm:max-h-[90vh] object-contain rounded-lg"
             />
           </div>
