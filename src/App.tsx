@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import MonksPage from './pages/MonksPage'
 import GenomeTechnologyPage from './pages/GenomeTechnologyPage'
 import PreventiveCarePage from './pages/PreventiveCarePage'
+import HospitalResearchPage from './pages/HospitalResearchPage'
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/monks" element={<MonksPage />} />
             <Route path="/genome-technology" element={<GenomeTechnologyPage />} />
             <Route path="/preventive-care" element={<PreventiveCarePage />} />
+            <Route path="/hospital-research" element={<HospitalResearchPage />} />
           </Routes>
         </main>
         <Footer />
