@@ -44,7 +44,7 @@ export default function GenomeTechnologyPage() {
               <li>
                 <strong>การตรวจสอบ "พิมพ์เขียวดั้งเดิม" ที่ได้รับมาแต่กำเนิด (Genomics/Static Risk)</strong>
                 <p className="mt-2">
-                  คือการตรวจรหัสพันธุกรรม (WGS) เพื่อทราบว่าแผนผังของอาคารร่างกายที่เราได้รับมานี้มีโครงสร้างอย่างไร
+                  คือการตรวจรหัสพันธุกรรมเพื่อทราบว่าแผนผังของอาคารร่างกายที่เราได้รับมานี้มีโครงสร้างอย่างไร
                   มีจุดแข็งหรือจุดที่อาจมีความเปราะบางตรงไหนบ้าง เปรียบเหมือนการดูพิมพ์เขียวต้นฉบับของอาคารว่ามีฐานรากและเสาเข็มแข็งแรงเพียงใด
                 </p>
                 <div className="mt-3 overflow-hidden rounded-lg">
@@ -57,14 +57,55 @@ export default function GenomeTechnologyPage() {
                   <li>PCR: ตรวจยีนหรือตำแหน่งเฉพาะจุด</li>
                 </ul>
                 <p className="mt-3 font-semibold">การแปลผล มี 2 แบบ:</p>
-                <ul className="mt-2 space-y-1 ml-6 list-disc">
-                  <li>
-                    <strong>Monogenic (ยีนเดี่ยว):</strong> ตรวจว่ายีนตัวใดตัวหนึ่งมีความผิดปกติชัดเจนหรือไม่ ซึ่งอาจส่งผลให้มีความเสี่ยงต่อโรคบางชนิดสูงกว่าคนทั่วไป
-                  </li>
-                  <li>
-                    <strong>Polygenic (กลุ่มยีน):</strong> นำข้อมูลจากยีนหลายตัวมาคำนวณร่วมกัน เพื่อประเมินความเสี่ยงสะสมต่อโรคเรื้อรัง เช่น เบาหวาน ความดันโลหิตสูง
-                  </li>
-                </ul>
+                <div className="mt-3 grid gap-4 md:grid-cols-2">
+                  <div className="rounded-lg border border-neutral-200 p-4 bg-neutral-50">
+                    <h4 className="font-semibold text-neutral-900 mb-2">Monogenic (ยีนเดี่ยว)</h4>
+                    <p className="text-sm text-neutral-700 mb-3">
+                      ตรวจว่ายีนตัวใดตัวหนึ่งมีความผิดปกติชัดเจนหรือไม่ ซึ่งอาจส่งผลให้มีความเสี่ยงต่อโรคบางชนิดสูงกว่าคนทั่วไป
+                    </p>
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="/images/monogenic.png"
+                        alt="Monogenic"
+                        className="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        onClick={() => {
+                          setModalImageSrc('/images/monogenic.png')
+                          setIsImageModalOpen(true)
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="rounded-lg border border-neutral-200 p-4 bg-neutral-50">
+                    <h4 className="font-semibold text-neutral-900 mb-2">Polygenic (กลุ่มยีน)</h4>
+                    <p className="text-sm text-neutral-700 mb-3">
+                      นำข้อมูลจากยีนหลายตัวมาคำนวณร่วมกัน เพื่อประเมินความเสี่ยงสะสมต่อโรคเรื้อรัง เช่น เบาหวาน ความดันโลหิตสูง
+                    </p>
+                    <div className="grid gap-3">
+                      <div className="overflow-hidden rounded-lg">
+                        <img
+                          src="/images/polygenic.png"
+                          alt="Polygenic"
+                          className="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                          onClick={() => {
+                            setModalImageSrc('/images/polygenic.png')
+                            setIsImageModalOpen(true)
+                          }}
+                        />
+                      </div>
+                      <div className="overflow-hidden rounded-lg">
+                        <img
+                          src="/images/PRS.png"
+                          alt="Polygenic risk score"
+                          className="w-full h-36 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                          onClick={() => {
+                            setModalImageSrc('/images/PRS.png')
+                            setIsImageModalOpen(true)
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
                 <strong>การตรวจสอบ "สภาพอาคารปัจจุบัน" จากการใช้งาน (Biomarkers/Dynamic Risk)</strong>
@@ -99,6 +140,14 @@ export default function GenomeTechnologyPage() {
             <p className="text-body text-neutral-700 leading-relaxed mt-4">
               เทคโนโลยีนี้จึงเป็นเครื่องมือสำคัญในการดูแลสุขภาพเชิงป้องกัน และการดูแลธาตุขันธ์ให้สมดุล
             </p>
+            <div className="mt-6">
+              <p className="text-body text-neutral-700 leading-relaxed mb-3">
+                อย่างไรก็ตามต้องคำนึงถึงข้อจำกัดของข้อมูล และใช้เป็นเพียงข้อมูลสนับสนุนแผนการป้องกันและรักษาต่อไป
+              </p>
+              <div className="overflow-hidden rounded-lg">
+                <img src="/images/limitation.png" alt="Limitation" className="w-full h-auto object-contain" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
