@@ -80,6 +80,14 @@ export default function HospitalResearchPage() {
                     การตรวจคัดกรองภาวะสมองเสื่อม (TMSE)
                   </a>
                   <a
+                    href="https://script.google.com/macros/s/AKfycbzieskeG-QliS4U4LnC-SR1sOYDGLJuptiMqPl0aMQjYru00MK--LcQUJR0CblsZlU/exec"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-teal-700 underline underline-offset-4 hover:text-teal-600"
+                  >
+                    Check list Inclusion/Exclusion criteria
+                  </a>
+                  <a
                     href="https://www.dnallth.com/"
                     target="_blank"
                     rel="noreferrer"

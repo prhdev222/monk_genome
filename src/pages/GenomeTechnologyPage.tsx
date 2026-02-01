@@ -145,7 +145,15 @@ export default function GenomeTechnologyPage() {
                 อย่างไรก็ตามต้องคำนึงถึงข้อจำกัดของข้อมูล และใช้เป็นเพียงข้อมูลสนับสนุนแผนการป้องกันและรักษาต่อไป
               </p>
               <div className="overflow-hidden rounded-lg">
-                <img src="/images/limitation.png" alt="Limitation" className="w-full h-auto object-contain" />
+                <img
+                  src="/images/limitation.png"
+                  alt="Limitation"
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => {
+                    setModalImageSrc('/images/limitation.png')
+                    setIsImageModalOpen(true)
+                  }}
+                />
               </div>
             </div>
           </div>
