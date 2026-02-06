@@ -269,10 +269,17 @@ export default function PreventiveCarePage() {
           <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
             เริ่มต้นวันนี้เพื่อสุขภาพที่ดีกว่า
           </h2>
-          <p className="text-body-lg text-neutral-700 leading-relaxed mb-8">
-            การเปลี่ยนแปลงเล็กๆ น้อยๆ ในชีวิตประจำวันสามารถสร้างผลลัพธ์ที่ยิ่งใหญ่ต่อสุขภาพในระยะยาว
-            เริ่มจากสิ่งที่ทำได้และค่อยๆ เพิ่มขึ้น
-          </p>
+          <div className="text-body-lg text-neutral-700 leading-relaxed mb-8 space-y-4">
+            <p>
+              การเปลี่ยนแปลงเล็กๆ น้อยๆ ในชีวิตประจำวันสามารถสร้างผลลัพธ์ที่ยิ่งใหญ่ต่อสุขภาพในระยะยาว เริ่มจากสิ่งที่ทำได้และค่อยๆ เพิ่มขึ้น
+            </p>
+            <div className="space-y-2 text-base text-neutral-700">
+              <p className="font-serif italic">กเรยฺย โยคฺคํ ธุวมปฺปมตฺโต.</p>
+              <p>“ผู้ไม่ประมาท ควรทำความเพียรให้แน่วแน่”</p>
+              <p className="font-serif italic">วายเมเถว ปุริโส ยาว อตฺถสฺส นิปฺปทา.</p>
+              <p>“บุรุษพึงพยายามไปจนกว่าจะสำเร็จประโยชน์”</p>
+            </div>
+          </div>
           <div className="mt-8 max-w-3xl mx-auto text-body text-neutral-700 leading-relaxed">
             <p className="mt-4 text-base text-neutral-700">
               แหล่งอ้างอิง:{' '}
