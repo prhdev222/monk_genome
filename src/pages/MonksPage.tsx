@@ -417,6 +417,25 @@ export default function MonksPage() {
         </div>
       </section>
 
+      {/* Audio Link */}
+      <section className="section-spacing bg-white">
+        <div className="container-narrow px-6 lg:px-16">
+          <div className="card p-8 lg:p-12">
+            <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-4">
+              ความสัมพันธ์ระหว่าง "กรรม" กับ "พันธุกรรม (DNA)"
+            </h2>
+            <div className="bg-neutral-50 rounded-md p-4 mb-4">
+              <iframe
+                src="https://drive.google.com/file/d/1899AshjdhKlquXLnefvzwwU6hxV0fy5A/preview"
+                className="w-full h-24 rounded-md border border-neutral-200"
+                allow="autoplay"
+                title="พุทธศาสนาและวิทยาศาสตร์ (ไฟล์เสียง)"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
