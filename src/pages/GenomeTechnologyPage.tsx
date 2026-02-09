@@ -637,6 +637,14 @@ export default function GenomeTechnologyPage() {
         </div>
       </section>
 
+      <section className="section-spacing bg-white">
+        <div className="container-narrow px-6 lg:px-16 text-center">
+          <a href="/preventive-care" className="btn-primary">
+            หน้าต่อไป: การดูแลสุขภาพ
+          </a>
+        </div>
+      </section>
+
       {/* Image Modal */}
       {isImageModalOpen && (
         <div 

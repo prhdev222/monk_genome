@@ -293,6 +293,11 @@ export default function PreventiveCarePage() {
               </a>
             </p>
           </div>
+          <div className="mt-10">
+            <a href="/" className="btn-primary">
+              หน้าต่อไป: หน้าแรก
+            </a>
+          </div>
         </div>
       </section>
     </div>

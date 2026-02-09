@@ -81,9 +81,40 @@ export default function Footer() {
                 <div className="text-neutral-300 text-sm">
                   <div>โรงพยาบาลสงฆ์</div>
                   <div>กรุงเทพมหานคร ประเทศไทย</div>
+                  <a
+                    href="https://maps.app.goo.gl/kLgg1Ec1Sy3jyhAN6"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex items-center text-xs text-gold-400 hover:text-gold-300 transition-colors"
+                  >
+                    แผนที่โรงพยาบาลสงฆ์
+                  </a>
                 </div>
               </li>
             </ul>
+            <div className="mt-6 rounded-md bg-emerald-500/10 border border-emerald-500/30 p-4 flex items-center justify-between gap-4">
+              <div>
+                <div className="text-sm font-semibold text-neutral-100 mb-1">
+                  รับข้อมูลผ่าน LINE OA อายุรกรรม
+                </div>
+                <div className="text-xs text-neutral-300 mb-3">
+                  สแกน QR หรือกดปุ่มเพื่อแชททาง LINE
+                </div>
+                <a
+                  href="https://line.me/R/ti/p/@490kuerv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-sm bg-emerald-500 text-white hover:bg-emerald-400 transition-colors"
+                >
+                  เปิดใน LINE
+                </a>
+              </div>
+              <img
+                src="/images/490kuerv.png"
+                alt="LINE OA @490kuerv QR"
+                className="w-20 h-20 rounded-md bg-white p-1"
+              />
+            </div>
           </div>
         </div>
 

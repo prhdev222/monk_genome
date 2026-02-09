@@ -436,6 +436,14 @@ export default function MonksPage() {
         </div>
       </section>
 
+      <section className="section-spacing bg-neutral-50">
+        <div className="container-narrow px-6 lg:px-16 text-center">
+          <a href="/genome-technology" className="btn-primary">
+            หน้าต่อไป: เทคโนโลยีการแพทย์
+          </a>
+        </div>
+      </section>
+
     </div>
   )
 }
