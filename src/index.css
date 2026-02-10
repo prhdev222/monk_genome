@@ -73,6 +73,14 @@
            hover:bg-neutral-50 hover:border-gold-500;
   }
 
+  .btn-saffron {
+    @apply text-[#4A1119] shadow-card
+           transition-all duration-fast ease-standard
+           hover:brightness-110 hover:scale-105 hover:shadow-card-hover
+           active:scale-95;
+    background: linear-gradient(135deg, #F4A23A 0%, #E27A1C 55%, #C55A10 100%);
+  }
+
   /* Card styles */
   .card {
     @apply bg-neutral-100 rounded-md shadow-card

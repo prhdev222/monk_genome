@@ -140,9 +140,14 @@ export default function HomePage() {
           <p className="text-body-lg text-neutral-700 max-w-2xl mx-auto mb-8">
             สำรวจเนื้อหาเชิงลึกในแต่ละด้านเพื่อความเข้าใจที่ครบถ้วนเกี่ยวกับการดูแลสุขภาพแบบองค์รวม
           </p>
-          <Link to="/monks" className="btn-primary">
-            เริ่มสำรวจเนื้อหา
-          </Link>
+          <div className="flex flex-col items-center gap-4">
+            <a href="/monk-multiomics-quiz.html" className="btn-primary btn-saffron">
+              ทำแบบทดสอบก่อนเรียนรู้
+            </a>
+            <Link to="/monks" className="btn-primary">
+              เริ่มสำรวจเนื้อหา
+            </Link>
+          </div>
         </div>
       </section>
     </div>
