@@ -264,8 +264,12 @@ export default function PreventiveCarePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="section-spacing-large bg-teal-50">
-        <div className="container-narrow px-6 lg:px-16 text-center">
+      <section
+        className="section-spacing-large relative bg-cover bg-top"
+        style={{ backgroundImage: "url('/images/bhuddasumpatha.png')" }}
+      >
+        <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
+        <div className="container-narrow px-6 lg:px-16 text-center relative z-10">
           <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
             เริ่มต้นวันนี้เพื่อสุขภาพที่ดีกว่า
           </h2>

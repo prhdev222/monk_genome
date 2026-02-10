@@ -128,8 +128,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing-large bg-neutral-100">
-        <div className="container mx-auto px-6 lg:px-16 text-center">
+      <section
+        className="section-spacing-large relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/Chewaka.png')" }}
+      >
+        <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
+        <div className="container mx-auto px-6 lg:px-16 text-center relative z-10">
           <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
             พร้อมที่จะเรียนรู้เพิ่มเติมหรือยัง
           </h2>

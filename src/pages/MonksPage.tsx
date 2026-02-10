@@ -418,8 +418,12 @@ export default function MonksPage() {
       </section>
 
       {/* Audio Link */}
-      <section className="section-spacing bg-white">
-        <div className="container-narrow px-6 lg:px-16">
+      <section
+        className="section-spacing relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/POleaf.png')" }}
+      >
+        <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
+        <div className="container-narrow px-6 lg:px-16 relative z-10">
           <div className="card p-8 lg:p-12">
             <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-4">
               ความสัมพันธ์ระหว่าง "กรรม" กับ "พันธุกรรม (DNA)"
