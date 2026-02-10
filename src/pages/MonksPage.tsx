@@ -422,9 +422,9 @@ export default function MonksPage() {
         className="section-spacing relative bg-cover bg-center"
         style={{ backgroundImage: "url('/images/POleaf.png')" }}
       >
-        <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
+        <div className="absolute inset-0 bg-white/60" aria-hidden="true" />
         <div className="container-narrow px-6 lg:px-16 relative z-10">
-          <div className="card p-8 lg:p-12">
+          <div className="card p-8 lg:p-12 bg-white/70 backdrop-blur-sm">
             <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-4">
               ความสัมพันธ์ระหว่าง "กรรม" กับ "พันธุกรรม (DNA)"
             </h2>
@@ -436,15 +436,22 @@ export default function MonksPage() {
                 title="พุทธศาสนาและวิทยาศาสตร์ (ไฟล์เสียง)"
               />
             </div>
+            <div className="text-body text-neutral-700 leading-relaxed space-y-3">
+              <p>
+                "มโนปุพฺพงฺคมา ธมฺมา" — ใจเป็นใหญ่ ร่างกายพร้อมเปลี่ยนตาม
+                รหัสพันธุกรรมคือ "วิบากเก่า" แต่สติคือ "กรรมปัจจุบัน" ที่ปิดสวิตช์ยีนร้ายได้ถึงระดับเซลล์
+              </p>
+              <p>
+                เมื่อวิบากกรรมเก่าถูกถอดรหัสด้วยนวัตกรรม — เทคโนโลยีระดับโลกคือดวงตาที่สอง
+                อ่านความลับของกายในระดับเซลล์ เปลี่ยนความแม่นยำเป็นโอกาสเยียวยาที่ยั่งยืน
+              </p>
+            </div>
+            <div className="mt-6 text-center">
+              <a href="/genome-technology" className="btn-primary">
+                หน้าต่อไป: เทคโนโลยีการแพทย์
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section-spacing bg-neutral-50">
-        <div className="container-narrow px-6 lg:px-16 text-center">
-          <a href="/genome-technology" className="btn-primary">
-            หน้าต่อไป: เทคโนโลยีการแพทย์
-          </a>
         </div>
       </section>
 
