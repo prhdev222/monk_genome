@@ -437,8 +437,9 @@ export default function MonksPage() {
               />
             </div>
             <div className="text-body text-neutral-700 leading-relaxed space-y-3">
-              <p>
+              <p className="text-center">
                 "มโนปุพฺพงฺคมา ธมฺมา" — ใจเป็นใหญ่ ร่างกายพร้อมเปลี่ยนตาม
+                <br />
                 รหัสพันธุกรรมคือ "วิบากเก่า" แต่สติคือ "กรรมปัจจุบัน" ที่ปิดสวิตช์ยีนร้ายได้
               </p>
               <p>
