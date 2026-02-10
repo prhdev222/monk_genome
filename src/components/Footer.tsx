@@ -122,11 +122,11 @@ export default function Footer() {
         <div className="border-t border-neutral-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-neutral-400 text-sm">
-              © {currentYear} พระสงฆ์ไทยกับการแพทย์ยุคใหม่ สงวนลิขสิทธิ์
+              © 2026 พระสงฆ์ไทยกับการแพทย์ยุคใหม่ directed by Uradev
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <p className="text-neutral-400 text-sm flex items-center">
-                สร้างด้วย <Heart size={16} className="mx-1 text-gold-500" /> เพื่อสุขภาพที่ดีกว่า
+                สร้างด้วย <Heart size={16} className="mx-1 text-gold-500" /> ขอให้พระคุณเจ้ามีสุขภาพแข็งแรง
               </p>
               <a
                 href="/hospital-research"
