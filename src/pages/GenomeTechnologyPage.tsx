@@ -581,8 +581,12 @@ export default function GenomeTechnologyPage() {
       </section>
 
       {/* Precision Medicine */}
-      <section className="section-spacing-large bg-navy-50">
-        <div className="container-narrow px-6 lg:px-16 text-center">
+      <section
+        className="section-spacing-large relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/pharmabuild.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
+        <div className="container-narrow px-6 lg:px-16 text-center relative z-10">
           <h2 className="font-serif font-semibold text-h2 text-neutral-900 mb-6">
             Precision & Personalized Medicine
           </h2>
@@ -634,14 +638,21 @@ export default function GenomeTechnologyPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section-spacing bg-white">
-        <div className="container-narrow px-6 lg:px-16 text-center">
-          <a href="/preventive-care" className="btn-primary">
-            หน้าต่อไป: การดูแลสุขภาพ
-          </a>
+          <div className="mt-10 text-body-lg text-neutral-700 leading-relaxed space-y-4 text-left max-w-4xl mx-auto">
+            <p>
+              อินทริยปโรปริยัตตญาณ ความรู้ในการหยั่งรู้ความพร้อมของแต่ละบุคคล
+              พระพุทธเจ้าจึงทรงแสดงธรรมแตกต่างกันตามผู้ฟัง
+            </p>
+            <p>
+              สอดคล้องกับ Personalized Medicine ยอมรับว่าผู้ป่วยแต่ละรายมีพันธุกรรมและการตอบสนองต่อยาที่แตกต่างกัน
+              การดูแลสุขภาพจึงต้องปรับให้เหมาะกับแต่ละบุคคล
+            </p>
+          </div>
+          <div className="mt-10 text-center">
+            <a href="/preventive-care" className="btn-primary">
+              หน้าต่อไป: การดูแลสุขภาพ
+            </a>
+          </div>
         </div>
       </section>
 
