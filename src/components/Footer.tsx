@@ -121,7 +121,15 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-neutral-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-neutral-400 text-sm">© 2026 directed by Uradev</p>
+            <p className="text-neutral-400 text-sm">
+              © 2026 directed by{' '}
+              <a
+                href="mailto:uradev222@gmail.com"
+                className="text-neutral-200 hover:text-gold-400 transition-colors"
+              >
+                Uradev
+              </a>
+            </p>
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <p className="text-neutral-400 text-sm flex items-center">
                 สร้างด้วย <Heart size={16} className="mx-1 text-gold-500" /> ขอให้พระคุณเจ้ามีสุขภาพแข็งแรง
