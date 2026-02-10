@@ -297,9 +297,12 @@ export default function PreventiveCarePage() {
               </a>
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center gap-4">
+            <a href="/monk-multiomics-quiz.html" className="btn-primary">
+              ทำแบบทดสอบ
+            </a>
             <a href="/" className="btn-primary">
-              หน้าต่อไป: หน้าแรก
+              กลับไป: หน้าแรก
             </a>
           </div>
         </div>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบทดสอบความรู้ Multi-omics สำหรับพระสงฆ์</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C8A351;
+    --gold-light: #E8D5A0;
+    --gold-dark: #9A7B3A;
+    --maroon: #6B1D2A;
+    --maroon-deep: #4A1119;
+    --cream: #FDF8EE;
+    --cream-dark: #F5EDD8;
+    --text-dark: #2D1810;
+    --text-muted: #6B5D52;
+    --green: #2E7D4F;
+    --green-light: #E8F5EE;
+    --red: #C0392B;
+    --red-light: #FDEDEC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Decorative background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(200, 163, 81, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(107, 29, 42, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 36px;
+    animation: fadeDown 0.8s ease;
+  }
+
+  .header-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(200, 163, 81, 0.3);
+  }
+
+  .header-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: white;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 1.6rem;
+    color: var(--maroon);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Progress bar */
+  .progress-section {
+    margin-bottom: 28px;
+    animation: fadeDown 0.8s ease 0.1s both;
+  }
+
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .progress-info span:first-child {
+    font-weight: 600;
+    color: var(--maroon);
+  }
+
+  .progress-bar {
+    height: 6px;
+    background: var(--cream-dark);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Question card */
+  .question-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(45, 24, 16, 0.06);
+    border: 1px solid rgba(200, 163, 81, 0.15);
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease;
+  }
+
+  .question-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .question-text {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  /* Options */
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--cream);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: left;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    width: 100%;
+  }
+
+  .option-btn:hover:not(.disabled) {
+    background: var(--cream-dark);
+    border-color: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .option-btn .option-label {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #D1C7B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+    margin-top: 1px;
+  }
+
+  .option-btn:hover:not(.disabled) .option-label {
+    border-color: var(--gold);
+    color: var(--gold-dark);
+  }
+
+  .option-btn.selected {
+    background: rgba(200, 163, 81, 0.1);
+    border-color: var(--gold);
+  }
+
+  .option-btn.selected .option-label {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  .option-btn.correct {
+    background: var(--green-light);
+    border-color: var(--green);
+  }
+
+  .option-btn.correct .option-label {
+    background: var(--green);
+    border-color: var(--green);
+    color: white;
+  }
+
+  .option-btn.incorrect {
+    background: var(--red-light);
+    border-color: var(--red);
+  }
+
+  .option-btn.incorrect .option-label {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+
+  .option-btn.disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+
+  .option-btn.correct.disabled,
+  .option-btn.incorrect.disabled {
+    opacity: 1;
+  }
+
+  /* Explanation */
+  .explanation {
+    margin-top: 20px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, rgba(200, 163, 81, 0.08), rgba(200, 163, 81, 0.03));
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    animation: fadeIn 0.4s ease;
+  }
+
+  .explanation strong {
+    color: var(--maroon);
+  }
+
+  /* Navigation */
+  .nav-section {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    animation: fadeIn 0.5s ease 0.2s both;
+  }
+
+  .nav-btn {
+    padding: 14px 36px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .nav-btn.primary {
+    background: linear-gradient(135deg, var(--maroon), var(--maroon-deep));
+    color: white;
+    box-shadow: 0 4px 16px rgba(107, 29, 42, 0.25);
+  }
+
+  .nav-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(107, 29, 42, 0.35);
+  }
+
+  .nav-btn.primary:disabled {
+    opacity: 0.4;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .nav-btn.secondary {
+    background: white;
+    color: var(--maroon);
+    border: 2px solid var(--maroon);
+  }
+
+  .nav-btn.secondary:hover {
+    background: var(--maroon);
+    color: white;
+  }
+
+  /* Results page */
+  .results-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 28px;
+    box-shadow: 0 4px 24px rgba(45, 24, 16, 0.08);
+    border: 1px solid rgba(200, 163, 81, 0.2);
+    text-align: center;
+    animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .score-circle {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
+    position: relative;
+  }
+
+  .score-circle svg {
+    transform: rotate(-90deg);
+    width: 140px;
+    height: 140px;
+  }
+
+  .score-circle .bg {
+    fill: none;
+    stroke: var(--cream-dark);
+    stroke-width: 8;
+  }
+
+  .score-circle .fg {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--maroon);
+  }
+
+  .score-text small {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .results-title {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 1.4rem;
+    color: var(--maroon);
+    margin-bottom: 12px;
+  }
+
+  .results-message {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .results-summary {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 28px;
+    padding: 16px 0;
+    border-top: 1px solid var(--cream-dark);
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .summary-item {
+    text-align: center;
+  }
+
+  .summary-item .num {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .summary-item .num.correct-num { color: var(--green); }
+  .summary-item .num.incorrect-num { color: var(--red); }
+
+  .summary-item .label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .results-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  /* Animations */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .hidden { display: none !important; }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .container { padding: 16px 14px 48px; }
+    .header h1 { font-size: 1.35rem; }
+    .question-card { padding: 22px 18px; }
+    .question-text { font-size: 1.05rem; }
+    .option-btn { padding: 14px 14px; font-size: 0.95rem; }
+    .results-card { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+    </div>
+    <h1>แบบทดสอบความรู้<br>เทคโนโลยี Multi-omics</h1>
+    <p>ทดสอบความเข้าใจเกี่ยวกับเทคโนโลยีการดูแลสุขภาพเชิงรุก</p>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-section" id="progressSection">
+    <div class="progress-info">
+      <span id="progressLabel">ข้อที่ 1 จาก 5</span>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Area -->
+  <div id="quizArea"></div>
+
+  <!-- Navigation -->
+  <div class="nav-section" id="navSection">
+    <button class="nav-btn primary" id="nextBtn" disabled onclick="nextQuestion()">ข้อถัดไป</button>
+  </div>
+
+  <!-- Results -->
+  <div class="results-card hidden" id="resultsCard">
+    <div class="score-circle">
+      <svg viewBox="0 0 128 128">
+        <circle class="bg" cx="64" cy="64" r="60" />
+        <circle class="fg" id="scoreFg" cx="64" cy="64" r="60" />
+      </svg>
+      <div class="score-text" id="scoreText">0<small>/5</small></div>
+    </div>
+    <div class="results-title" id="resultsTitle"></div>
+    <div class="results-message" id="resultsMessage"></div>
+    <div class="results-summary">
+      <div class="summary-item">
+        <div class="num correct-num" id="correctCount">0</div>
+        <div class="label">ตอบถูก</div>
+      </div>
+      <div class="summary-item">
+        <div class="num incorrect-num" id="incorrectCount">0</div>
+        <div class="label">ตอบผิด</div>
+      </div>
+    </div>
+  <div class="results-actions">
+    <button class="nav-btn primary" onclick="restartQuiz()">ทำแบบทดสอบอีกครั้ง</button>
+    <a class="nav-btn secondary" href="/">กลับไป: หน้าแรก</a>
+  </div>
+  </div>
+</div>
+
+<script>
+const questions = [
+  {
+    question: "เทคโนโลยี Multi-omics ตรวจสอบความเสี่ยงโรคของเราใน 2 มิติ ได้แก่ \"ความเสี่ยงจากพันธุกรรม\" กับอะไร?",
+    options: [
+      "ความเสี่ยงจากสิ่งแวดล้อมภายนอก เช่น มลพิษ",
+      "ความเสี่ยงจากวิถีชีวิตและโภชนาการในปัจจุบัน",
+      "ความเสี่ยงจากเชื้อโรคและการติดเชื้อ",
+      "ความเสี่ยงจากอายุที่เพิ่มมากขึ้น"
+    ],
+    correct: 1,
+    explanation: "Multi-omics ตรวจสอบความเสี่ยง 2 มิติ คือ <strong>ความเสี่ยงคงที่ (Static Risk)</strong> จากพันธุกรรมที่ติดตัวมาแต่เกิด และ <strong>ความเสี่ยงพลวัต (Dynamic Risk)</strong> จากวิถีชีวิตและโภชนาการปัจจุบัน เช่น อาหารที่ฉัน การพักผ่อน ซึ่งส่งผลต่อสารบ่งชี้ (Biomarker) ในร่างกาย"
+  },
+  {
+    question: "การตรวจ Whole Genome Sequencing (WGS) หมายถึงอะไร?",
+    options: [
+      "การตรวจเลือดทั่วไปเพื่อหาค่าน้ำตาลและไขมัน",
+      "การอ่านรหัสพันธุกรรม (DNA) ทั้งชุดของร่างกาย",
+      "การถ่ายภาพรังสีเพื่อตรวจอวัยวะภายใน",
+      "การตรวจจุลินทรีย์ในลำไส้"
+    ],
+    correct: 1,
+    explanation: "<strong>Whole Genome Sequencing (WGS)</strong> คือการอ่านรหัสพันธุกรรม (DNA) ทั้งชุดของร่างกาย เปรียบเหมือนการอ่าน \"พิมพ์เขียว\" ของร่างกายเพื่อดูว่ามีจุดแข็งหรือจุดอ่อนทางพันธุกรรมตรงไหนบ้าง ช่วยให้ทราบความเสี่ยงโรคที่ติดตัวมาแต่กำเนิด"
+  },
+  {
+    question: "พระสงฆ์ไทยมีความเสี่ยงสูงต่อโรคไม่ติดต่อเรื้อรัง (NCDs) เนื่องจากสาเหตุใดเป็นหลัก?",
+    options: [
+      "การนอนไม่เพียงพอจากการสวดมนต์ตอนเช้า",
+      "การขาดการออกกำลังกายอย่างหนัก",
+      "อาหารบิณฑบาตที่มักมีรสหวาน มัน และเค็ม",
+      "การสัมผัสมลพิษทางอากาศในเมือง"
+    ],
+    correct: 2,
+    explanation: "วิถีชีวิตของพระสงฆ์ที่ได้รับ <strong>อาหารจากการบิณฑบาต</strong> ซึ่งมักมีรสหวาน มัน และเค็ม เป็นปัจจัยสำคัญที่ทำให้เกิดความเสี่ยงสูงต่อโรค NCDs เช่น โรคหัวใจและหลอดเลือด ความดันโลหิตสูง เบาหวาน และโรคสมองเสื่อม"
+  },
+  {
+    question: "สาร pTau217 ที่ตรวจใน Biomarker เป็นสัญญาณบ่งชี้ความเสี่ยงของโรคใด?",
+    options: [
+      "โรคเบาหวาน",
+      "โรคหัวใจและหลอดเลือด",
+      "โรคอัลไซเมอร์ (สมองเสื่อม)",
+      "โรคมะเร็งลำไส้"
+    ],
+    correct: 2,
+    explanation: "<strong>pTau217</strong> เป็นสารบ่งชี้ (Biomarker) ที่ใช้ประเมินความเสี่ยงของ <strong>โรคอัลไซเมอร์ (สมองเสื่อม)</strong> ส่วน TMAO เป็นสัญญาณของโรคหัวใจจากจุลินทรีย์ในลำไส้ และ DNA Methylation ใช้คัดกรองมะเร็งลำไส้ระยะเริ่มต้น"
+  },
+  {
+    question: "ข้อใดอธิบายประโยชน์ของ Multi-omics ได้ถูกต้องที่สุด?",
+    options: [
+      "รักษาโรคได้ทุกชนิดโดยไม่ต้องใช้ยา",
+      "ช่วยวางแผนดูแลสุขภาพเฉพาะบุคคลเพื่อป้องกันโรคตั้งแต่เนิ่นๆ",
+      "ทดแทนการตรวจสุขภาพประจำปีที่โรงพยาบาลได้ทั้งหมด",
+      "แก้ไขรหัสพันธุกรรมให้ไม่มีความเสี่ยงโรคอีกต่อไป"
+    ],
+    correct: 1,
+    explanation: "ประโยชน์หลักของ Multi-omics คือ <strong>การวางแผนดูแลสุขภาพแบบเฉพาะบุคคล (Personalized Medicine)</strong> โดยรวมข้อมูลทั้งจากพันธุกรรมและวิถีชีวิต ทำให้ป้องกันและจัดการโรค NCDs ได้แม่นยำและเหมาะสมกับแต่ละท่านตั้งแต่เนิ่นๆ ไม่ใช่การรักษาหรือแก้ไขยีน"
+  }
+];
+
+let currentQ = 0;
+let score = 0;
+let answered = false;
+let userAnswers = [];
+
+function renderQuestion() {
+  const q = questions[currentQ];
+  const labels = ['ก', 'ข', 'ค', 'ง'];
+  
+  document.getElementById('quizArea').innerHTML = `
+    <div class="question-card">
+      <div class="question-number">ข้อที่ ${currentQ + 1}</div>
+      <div class="question-text">${q.question}</div>
+      <div class="options-list">
+        ${q.options.map((opt, i) => `
+          <button class="option-btn" onclick="selectAnswer(${i})" id="opt${i}">
+            <span class="option-label">${labels[i]}</span>
+            <span>${opt}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="explanation hidden" id="explanation">${q.explanation}</div>
+    </div>
+  `;
+
+  answered = false;
+  const nextBtn = document.getElementById('nextBtn');
+  nextBtn.disabled = true;
+  nextBtn.textContent = currentQ < questions.length - 1 ? 'ข้อถัดไป' : 'ดูผลลัพธ์';
+
+  // Update progress
+  document.getElementById('progressLabel').textContent = `ข้อที่ ${currentQ + 1} จาก ${questions.length}`;
+  const pct = Math.round((currentQ / questions.length) * 100);
+  document.getElementById('progressPercent').textContent = pct + '%';
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+
+function selectAnswer(idx) {
+  if (answered) return;
+  answered = true;
+
+  const q = questions[currentQ];
+  const isCorrect = idx === q.correct;
+  
+  if (isCorrect) score++;
+  userAnswers.push({ selected: idx, correct: q.correct, isCorrect });
+
+  // Style all options
+  for (let i = 0; i < q.options.length; i++) {
+    const btn = document.getElementById('opt' + i);
+    btn.classList.add('disabled');
+    if (i === q.correct) btn.classList.add('correct');
+    if (i === idx && !isCorrect) btn.classList.add('incorrect');
+  }
+
+  // Show explanation
+  document.getElementById('explanation').classList.remove('hidden');
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function nextQuestion() {
+  currentQ++;
+  if (currentQ < questions.length) {
+    renderQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById('progressSection').classList.add('hidden');
+  document.getElementById('quizArea').innerHTML = '';
+  document.getElementById('navSection').classList.add('hidden');
+  document.getElementById('resultsCard').classList.remove('hidden');
+
+  // Score
+  document.getElementById('scoreText').innerHTML = `${score}<small>/${questions.length}</small>`;
+  document.getElementById('correctCount').textContent = score;
+  document.getElementById('incorrectCount').textContent = questions.length - score;
+
+  // Animate circle
+  const pct = score / questions.length;
+  const circumference = 2 * Math.PI * 60; // r=60
+  const offset = circumference * (1 - pct);
+  setTimeout(() => {
+    document.getElementById('scoreFg').style.strokeDashoffset = offset;
+    if (pct >= 0.8) {
+      document.getElementById('scoreFg').style.stroke = 'var(--green)';
+    } else if (pct >= 0.5) {
+      document.getElementById('scoreFg').style.stroke = 'var(--gold)';
+    } else {
+      document.getElementById('scoreFg').style.stroke = 'var(--red)';
+    }
+  }, 100);
+
+  // Message
+  let title, msg;
+  if (score === 5) {
+    title = 'ยอดเยี่ยมมาก! 🎉';
+    msg = 'ท่านมีความเข้าใจเกี่ยวกับเทคโนโลยี Multi-omics เป็นอย่างดี พร้อมดูแลสุขภาพเชิงรุกได้อย่างมีประสิทธิภาพ';
+  } else if (score >= 3) {
+    title = 'ดีมากครับ! 👏';
+    msg = 'ท่านมีพื้นฐานความเข้าใจที่ดี ลองทบทวนเนื้อหาเพิ่มเติมเพื่อเพิ่มพูนความรู้ให้สมบูรณ์ยิ่งขึ้น';
+  } else {
+    title = 'ขอบคุณที่ร่วมทำแบบทดสอบ 🙏';
+    msg = 'ท่านสามารถกลับไปศึกษาเนื้อหาบนเว็บไซต์เพิ่มเติม แล้วลองทำแบบทดสอบอีกครั้งได้ครับ';
+  }
+  document.getElementById('resultsTitle').textContent = title;
+  document.getElementById('resultsMessage').textContent = msg;
+}
+
+function restartQuiz() {
+  currentQ = 0;
+  score = 0;
+  answered = false;
+  userAnswers = [];
+
+  document.getElementById('progressSection').classList.remove('hidden');
+  document.getElementById('navSection').classList.remove('hidden');
+  document.getElementById('resultsCard').classList.add('hidden');
+
+  renderQuestion();
+}
+
+// Init
+renderQuestion();
+</script>
+</body>
+</html>
