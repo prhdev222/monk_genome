@@ -1,6 +1,15 @@
-import { BookOpen, Brain, Scale, Lightbulb, AlertCircle } from 'lucide-react'
+import { useState } from 'react'
+import { BookOpen, Brain, Scale, Lightbulb, AlertCircle, X } from 'lucide-react'
 
 export default function MonksPage() {
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
+  const [modalImageSrc, setModalImageSrc] = useState<string | null>(null)
+
+  const openImageModal = (src: string) => {
+    setModalImageSrc(src)
+    setIsImageModalOpen(true)
+  }
+
   const naturalLaws = [
     {
       icon: Brain,
@@ -368,6 +377,18 @@ export default function MonksPage() {
                   <p className="text-body text-neutral-700 leading-relaxed">
                     ให้คำตอบในมิติของ <strong>"ทำไม"</strong> (Why) ผ่านหลักกรรมและปฏิจจสมุปบาท
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => openImageModal('/images/pathijasmut.jpg')}
+                    className="mt-4 block w-full"
+                    aria-label="ขยายรูปพุทธศาสตร์"
+                  >
+                    <img
+                      src="/images/pathijasmut.jpg"
+                      alt="พุทธศาสตร์"
+                      className="w-full h-40 object-cover rounded-md shadow-card transition-transform duration-standard hover:scale-[1.02]"
+                    />
+                  </button>
                 </div>
                 <div className="bg-navy-50 p-6 rounded-md">
                   <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
@@ -376,6 +397,32 @@ export default function MonksPage() {
                   <p className="text-body text-neutral-700 leading-relaxed">
                     ให้คำตอบในมิติของ <strong>"อย่างไร"</strong> (How) ผ่านกระบวนการทางชีววิทยาและพันธุศาสตร์
                   </p>
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => openImageModal('/images/DNA_RNA.png')}
+                      className="block w-full"
+                      aria-label="ขยายรูป DNA/RNA"
+                    >
+                      <img
+                        src="/images/DNA_RNA.png"
+                        alt="DNA และ RNA"
+                        className="w-full h-32 object-contain rounded-md shadow-card bg-white p-2 transition-transform duration-standard hover:scale-[1.02]"
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => openImageModal('/images/genetic-pic-1.jpg')}
+                      className="block w-full"
+                      aria-label="ขยายรูปพันธุศาสตร์"
+                    >
+                      <img
+                        src="/images/genetic-pic-1.jpg"
+                        alt="ภาพพันธุศาสตร์"
+                        className="w-full h-32 object-cover rounded-md shadow-card transition-transform duration-standard hover:scale-[1.02]"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="bg-gold-50 p-6 rounded-md border-l-4 border-gold-500">
@@ -455,6 +502,34 @@ export default function MonksPage() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {isImageModalOpen && modalImageSrc && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 overflow-auto"
+          onClick={() => setIsImageModalOpen(false)}
+        >
+          <button
+            onClick={() => setIsImageModalOpen(false)}
+            className="fixed top-3 right-3 sm:top-4 sm:right-4 z-20 bg-white rounded-full p-2.5 sm:p-3 hover:bg-neutral-100 transition-colors shadow-lg"
+            aria-label="ปิด"
+          >
+            <X size={22} className="sm:w-6 sm:h-6 text-neutral-900" />
+          </button>
+          <div
+            className="min-h-full flex items-center justify-center p-3 sm:p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-white p-3 sm:p-4 rounded-md shadow-modal">
+              <img
+                src={modalImageSrc}
+                alt="ขยายรูป"
+                className="max-w-full max-h-[85vh] object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   )
