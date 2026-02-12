@@ -473,7 +473,7 @@ export default function MonksPage() {
         <div className="container-narrow px-6 lg:px-16 relative z-10">
           <div className="card p-8 lg:p-12 bg-white/70 backdrop-blur-sm">
             <h2 className="font-serif font-semibold text-h3 text-neutral-900 mb-4">
-              ความสัมพันธ์ระหว่าง "กรรม" กับ "พันธุกรรม (DNA)"
+              "เหนือกรรม" กับ "เหนือพันธุกรรม"
             </h2>
             <div className="bg-neutral-50 rounded-md p-4 mb-4">
               <iframe
@@ -489,9 +489,41 @@ export default function MonksPage() {
                 <br />
                 รหัสพันธุกรรมคือ "วิบากเก่า" แต่สติคือ "กรรมปัจจุบัน" ที่ปิดสวิตช์ยีนร้ายได้
               </p>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div className="bg-neutral-50 rounded-md p-4">
+                  <p className="font-semibold text-neutral-900 mb-2">เหนือกรรม(กรรมเก่า--กรรมใหม่)</p>
+                  <div className="aspect-video w-full max-w-sm rounded-md overflow-hidden border border-neutral-200">
+                    <iframe
+                      src="https://www.youtube.com/embed/9TaM3jleoTg?start=1"
+                      title="เหนือกรรม (กรรมเก่า--กรรมใหม่)"
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                  <p className="mt-2 text-neutral-700">
+                    สรุปสั้นๆ: ตอกย้ำว่ากรรมใหม่คือการกระทำปัจจุบันที่เปลี่ยนทิศทางชีวิตได้
+                  </p>
+                </div>
+                <div className="bg-neutral-50 rounded-md p-4">
+                  <p className="font-semibold text-neutral-900 mb-2">เหนือพันธุกรรม (epigenetics)</p>
+                  <div className="aspect-video w-full max-w-sm rounded-md overflow-hidden border border-neutral-200 md:ml-auto">
+                    <iframe
+                      src="https://www.youtube.com/embed/zIuiGUgyKH8"
+                      title="เหนือพันธุกรรม (epigenetics)"
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                  <p className="mt-2 text-neutral-700">
+                    สรุปสั้นๆ: วิถีชีวิตและสิ่งแวดล้อมสามารถเปิด-ปิดการแสดงออกของยีนได้
+                  </p>
+                </div>
+              </div>
               <p>
                 เมื่อวิบากกรรมเก่าถูกถอดรหัสด้วยนวัตกรรม — เทคโนโลยีระดับโลกคือดวงตาที่สอง
-                อ่านความลับของกายในระดับเซลล์ เปลี่ยนความแม่นยำเป็นโอกาสเยียวยาที่ยั่งยืน
+                อ่านความลับของกายในระดับเซลล์ เปลี่ยนความแม่นยำ(Precision medicine)เป็นโอกาสเยียวยาที่ยั่งยืน
               </p>
             </div>
             <div className="mt-6 text-center">
