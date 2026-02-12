@@ -72,48 +72,96 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Related Links */}
           <div>
-            <h3 className="font-serif font-semibold text-lg mb-6">ติดต่อ</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-gold-500 mt-1 flex-shrink-0" />
-                <div className="text-neutral-300 text-sm">
-                  <div>โรงพยาบาลสงฆ์</div>
-                  <div>กรุงเทพมหานคร ประเทศไทย</div>
-                  <a
-                    href="https://maps.app.goo.gl/kLgg1Ec1Sy3jyhAN6"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-2 inline-flex items-center text-xs text-gold-400 hover:text-gold-300 transition-colors"
-                  >
-                    แผนที่โรงพยาบาลสงฆ์
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <div className="mt-6 rounded-md bg-emerald-500/10 border border-emerald-500/30 p-4 flex items-center justify-between gap-4">
-              <div>
-                <div className="text-sm font-semibold text-neutral-100 mb-1">
-                  รับข้อมูลผ่าน LINE OA อายุรกรรม
-                </div>
-                <div className="text-xs text-neutral-300 mb-3">
-                  สแกน QR หรือกดปุ่มเพื่อแชททาง LINE
-                </div>
+            <h3 className="font-serif font-semibold text-lg mb-6">เว็บไซต์ที่เกี่ยวข้อง</h3>
+            <ul className="space-y-3">
+              <li>
                 <a
-                  href="https://line.me/R/ti/p/@490kuerv"
+                  href="https://servicekc.dms.go.th/dashboard/default?ps=s_priest"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-sm bg-emerald-500 text-white hover:bg-emerald-400 transition-colors"
+                  className="text-neutral-300 hover:text-gold-500 transition-colors text-sm"
                 >
-                  เปิดใน LINE
+                  Dashboard กรมการแพทย์
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.dms.go.th/?StartWeb=1"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-neutral-300 hover:text-gold-500 transition-colors text-sm"
+                >
+                  กรมการแพทย์
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.priest-hospital.go.th/index.php"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-neutral-300 hover:text-gold-500 transition-colors text-sm"
+                >
+                  โรงพยาบาลสงฆ์
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="lg:col-span-2">
+            <h3 className="font-serif font-semibold text-lg mb-6">ติดต่อ</h3>
+            <div className="grid gap-4 md:grid-cols-2 md:items-stretch">
+              <div className="rounded-md bg-neutral-800/60 border border-neutral-700 p-4 flex flex-col h-full md:min-h-[220px]">
+                <div className="flex items-start gap-3 mb-3">
+                  <MapPin size={18} className="text-gold-500 mt-1 flex-shrink-0" />
+                  <div className="text-neutral-300 text-sm">
+                    <div>โรงพยาบาลสงฆ์</div>
+                    <div>กรุงเทพมหานคร ประเทศไทย</div>
+                  </div>
+                </div>
+                <div className="w-full overflow-hidden rounded-md border border-neutral-700 bg-neutral-900">
+                  <iframe
+                    title="แผนที่โรงพยาบาลสงฆ์"
+                    src="https://www.google.com/maps?q=%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%87%E0%B8%86%E0%B9%8C&output=embed"
+                    className="w-full h-40"
+                    loading="lazy"
+                  />
+                </div>
+                <a
+                  href="https://maps.app.goo.gl/kLgg1Ec1Sy3jyhAN6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center text-xs text-gold-400 hover:text-gold-300 transition-colors"
+                >
+                  เปิดแผนที่โรงพยาบาลสงฆ์
                 </a>
               </div>
-              <img
-                src="/images/490kuerv.png"
-                alt="LINE OA @490kuerv QR"
-                className="w-20 h-20 rounded-md bg-white p-1"
-              />
+
+              <div className="rounded-md bg-emerald-500/10 border border-emerald-500/30 p-4 flex flex-col gap-4 h-full md:flex-row md:items-center md:justify-between md:min-h-[220px]">
+                <div className="flex-1">
+                  <div className="text-sm font-semibold text-neutral-100 mb-1">
+                    รับข้อมูลผ่าน LINE OA อายุรกรรม
+                  </div>
+                  <div className="text-xs text-neutral-300 mb-3">
+                    สแกน QR หรือกดปุ่มเพื่อแชททาง LINE
+                  </div>
+                  <a
+                    href="https://line.me/R/ti/p/@490kuerv"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-sm bg-emerald-500 text-white hover:bg-emerald-400 transition-colors"
+                  >
+                    เปิดใน LINE
+                  </a>
+                </div>
+                <img
+                  src="/images/490kuerv.png"
+                  alt="LINE OA @490kuerv QR"
+                  className="w-24 h-24 md:w-28 md:h-28 rounded-md bg-white p-1"
+                />
+              </div>
             </div>
           </div>
         </div>
