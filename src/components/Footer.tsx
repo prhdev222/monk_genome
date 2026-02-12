@@ -121,19 +121,11 @@ export default function Footer() {
                     <div>กรุงเทพมหานคร ประเทศไทย</div>
                   </div>
                 </div>
-                <div className="w-full overflow-hidden rounded-md border border-neutral-700 bg-neutral-900">
-                  <iframe
-                    title="แผนที่โรงพยาบาลสงฆ์"
-                    src="https://www.google.com/maps?q=%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%87%E0%B8%86%E0%B9%8C&output=embed"
-                    className="w-full h-40"
-                    loading="lazy"
-                  />
-                </div>
                 <a
                   href="https://maps.app.goo.gl/kLgg1Ec1Sy3jyhAN6"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-3 inline-flex items-center text-xs text-gold-400 hover:text-gold-300 transition-colors"
+                  className="mt-1 inline-flex items-center text-xs text-gold-400 hover:text-gold-300 transition-colors"
                 >
                   เปิดแผนที่โรงพยาบาลสงฆ์
                 </a>
