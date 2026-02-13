@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <h3 className="font-serif font-semibold text-lg mb-6">หัวข้อที่น่าสนใจ</h3>
             <ul className="space-y-3">
-              <li className="text-neutral-300 text-sm">ธรรมนามัย</li>
+              <li className="text-neutral-300 text-sm">กฎธรรมชาติ</li>
               <li className="text-neutral-300 text-sm">Multi-omics</li>
               <li className="text-neutral-300 text-sm">โรค NCD</li>
               <li className="text-neutral-300 text-sm">การป้องกันเชิงรุก</li>

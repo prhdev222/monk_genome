@@ -286,7 +286,7 @@ export default function PreventiveCarePage() {
           </div>
           <div className="mt-8 max-w-3xl mx-auto text-body text-neutral-700 leading-relaxed">
             <p className="mt-4 text-base text-neutral-700">
-              แหล่งอ้างอิง:{' '}
+              ศึกษาความรู้เพิ่มเติม:{' '}
               <a
                 href="https://prhdev222.github.io/med_prh_patientNCDs/"
                 target="_blank"
