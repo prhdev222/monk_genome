@@ -141,7 +141,12 @@ export default function HomePage() {
             สำรวจเนื้อหาเชิงลึกในแต่ละด้านเพื่อความเข้าใจที่ครบถ้วนเกี่ยวกับการดูแลสุขภาพแบบองค์รวม
           </p>
           <div className="flex flex-col items-center gap-4">
-            <a href="/monk-multiomics-quiz.html" className="btn-primary btn-saffron">
+            <a
+              href="https://prhdev222.github.io/monk-genome-quizpretest/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary btn-saffron"
+            >
               ทำแบบทดสอบก่อนเรียนรู้
             </a>
             <Link to="/monks" className="btn-primary">
