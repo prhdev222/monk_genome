@@ -299,7 +299,7 @@ export default function PreventiveCarePage() {
           </div>
           <div className="mt-10 flex flex-col items-center gap-4">
             <a
-              href="https://script.google.com/macros/s/AKfycbykxXd8nRfGFGlAjjp8PvkkOfhenfqnV0mdZBUIg4i5gUO8eX4KUwYZSiH6gkPNbUyY/exec"
+              href="https://prhdev222.github.io/monk-genome-quiz/"
               className="btn-primary btn-saffron"
               target="_blank"
               rel="noreferrer"
