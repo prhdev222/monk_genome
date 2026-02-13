@@ -298,7 +298,12 @@ export default function PreventiveCarePage() {
             </p>
           </div>
           <div className="mt-10 flex flex-col items-center gap-4">
-            <a href="/monk-multiomics-quiz.html" className="btn-primary btn-saffron">
+            <a
+              href="https://script.google.com/macros/s/AKfycbykxXd8nRfGFGlAjjp8PvkkOfhenfqnV0mdZBUIg4i5gUO8eX4KUwYZSiH6gkPNbUyY/exec"
+              className="btn-primary btn-saffron"
+              target="_blank"
+              rel="noreferrer"
+            >
               ทำแบบทดสอบหลังเรียนรู้
             </a>
             <a href="/" className="btn-primary">
