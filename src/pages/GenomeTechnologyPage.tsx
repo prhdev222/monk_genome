@@ -585,12 +585,36 @@ export default function GenomeTechnologyPage() {
               </p>
             </div>
             
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto space-y-6">
+              <a
+                href="https://prhdev222.github.io/AI_genome/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-feature p-8 group hover:shadow-card-hover transition-all duration-standard flex items-start block"
+              >
+                <div className="w-14 h-14 rounded-full bg-navy-50 flex items-center justify-center mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-standard">
+                  <BookOpen size={28} className="text-navy-600" />
+                </div>
+                <div className="flex-grow">
+                  <div className="flex items-center mb-2">
+                    <h4 className="font-serif font-semibold text-h4 text-neutral-900 mr-3">
+                      AI และ Machine Learning กับข้อมูลพันธุกรรม (Genomic)
+                    </h4>
+                    <ExternalLink size={18} className="text-navy-600 group-hover:text-navy-700" />
+                  </div>
+                  <p className="text-body text-neutral-700 leading-relaxed mb-3">
+                    อธิบายแบบง่ายๆ ว่า AI ช่วยเก็บและวิเคราะห์ข้อมูล DNA อย่างไร เพื่อช่วยคัดกรองความเสี่ยงโรค เลือกยาที่เหมาะกับแต่ละคน และพัฒนาการแพทย์แม่นยำ
+                  </p>
+                  <div className="text-sm text-neutral-500">
+                    prhdev222.github.io/AI_genome
+                  </div>
+                </div>
+              </a>
               <a
                 href="https://learn.genetics.utah.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-feature p-8 group hover:shadow-card-hover transition-all duration-standard flex items-start"
+                className="card-feature p-8 group hover:shadow-card-hover transition-all duration-standard flex items-start block"
               >
                 <div className="w-14 h-14 rounded-full bg-navy-50 flex items-center justify-center mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-standard">
                   <BookOpen size={28} className="text-navy-600" />
