@@ -345,23 +345,34 @@ export default function GenomeTechnologyPage() {
                   </ul>
                 </div>
 
-                <div className="bg-neutral-50 p-6 rounded-md">
-                  <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
-                    การประยุกต์ใช้
-                  </h3>
-                  <p className="text-body text-neutral-700 leading-relaxed mb-4">
-                    WGS ถูกนำมาใช้ในการแพทย์แม่นยำเพื่อ:
-                  </p>
-                  <ul className="space-y-2 text-body text-neutral-700 ml-6 mb-4">
-                    <li className="list-disc">การวินิจฉัยโรคหายากและโรคพันธุกรรม</li>
-                    <li className="list-disc">การทำนายความเสี่ยงต่อโรคไม่ติดต่อเรื้อรัง (NCDs)</li>
-                    <li className="list-disc">การเลือกยาและปรับขนาดยาตามพันธุกรรม (Pharmacogenomics)</li>
-                    <li className="list-disc">การตรวจหามะเร็งและการติดตามการรักษา</li>
-                    <li className="list-disc">การวิจัยและค้นพบยีนใหม่ที่เกี่ยวข้องกับโรค</li>
-                  </ul>
-                  <p className="text-body text-neutral-700 leading-relaxed">
-                    ข้อมูลจาก WGS มีปริมาณมหาศาล การจะอ่านและวิเคราะห์ด้วยคนอย่างเดียวจึงไม่เพียงพอ ปัจจุบันจึงนำ <strong>ปัญญาประดิษฐ์ (AI)</strong> และ <strong>Machine Learning</strong> มาช่วย ทำให้สามารถคัดกรองความผิดปกติทางพันธุกรรม แปลผล และทำนายความเสี่ยงของโรคได้ เร็วขึ้นและแม่นยำขึ้น กว่าเดิมมาก จึงกลายเป็นเครื่องมือสำคัญของการแพทย์แม่นยำในยุคปัจจุบัน
-                  </p>
+                <div className="relative overflow-hidden rounded-md p-6 min-h-[280px]">
+                  <div
+                    className="absolute inset-0 z-0 bg-center bg-no-repeat bg-neutral-100"
+                    style={{
+                      backgroundImage: "url('/images/GWAS_plot.png')",
+                      backgroundSize: "contain",
+                    }}
+                    aria-hidden
+                  />
+                  <div className="absolute inset-0 z-[1] bg-white/80" aria-hidden />
+                  <div className="relative z-10">
+                    <h3 className="font-serif font-semibold text-h4 text-neutral-900 mb-4">
+                      การประยุกต์ใช้
+                    </h3>
+                    <p className="text-body text-neutral-700 leading-relaxed mb-4">
+                      WGS ถูกนำมาใช้ในการแพทย์แม่นยำเพื่อ:
+                    </p>
+                    <ul className="space-y-2 text-body text-neutral-700 ml-6 mb-4">
+                      <li className="list-disc">การวินิจฉัยโรคหายากและโรคพันธุกรรม</li>
+                      <li className="list-disc">การทำนายความเสี่ยงต่อโรคไม่ติดต่อเรื้อรัง (NCDs)</li>
+                      <li className="list-disc">การเลือกยาและปรับขนาดยาตามพันธุกรรม (Pharmacogenomics)</li>
+                      <li className="list-disc">การตรวจหามะเร็งและการติดตามการรักษา</li>
+                      <li className="list-disc">การวิจัยและค้นพบยีนใหม่ที่เกี่ยวข้องกับโรค</li>
+                    </ul>
+                    <p className="text-body text-neutral-700 leading-relaxed">
+                      ข้อมูลจาก WGS มีปริมาณมหาศาล การจะอ่านและวิเคราะห์ด้วยคนอย่างเดียวจึงไม่เพียงพอ ปัจจุบันจึงนำ <strong>ปัญญาประดิษฐ์ (AI)</strong> และ <strong>Machine Learning</strong> มาช่วย ทำให้สามารถคัดกรองความผิดปกติทางพันธุกรรม แปลผล และทำนายความเสี่ยงของโรคได้ เร็วขึ้นและแม่นยำขึ้น กว่าเดิมมาก จึงกลายเป็นเครื่องมือสำคัญของการแพทย์แม่นยำในยุคปัจจุบัน
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
