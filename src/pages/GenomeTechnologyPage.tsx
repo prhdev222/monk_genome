@@ -293,10 +293,32 @@ export default function GenomeTechnologyPage() {
                     เป็นเทคโนโลยีการจัดลำดับดีเอ็นเอที่ครอบคลุมทั้งจีโนมของสิ่งมีชีวิต 
                     รวมถึงบริเวณที่เข้ารหัสโปรตีน (coding regions) และบริเวณที่ไม่เข้ารหัสโปรตีน (non-coding regions)
                   </p>
-                  <p className="text-body text-neutral-700 leading-relaxed">
+                  <figure className="rounded-lg overflow-hidden border border-neutral-200 shadow-sm max-w-md my-6">
+                    <img
+                      src="/images/genome_Quiz.png"
+                      alt="Genome Quiz - แบบทดสอบความรู้จีโนม"
+                      className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition"
+                      onClick={() => { setModalImageSrc('/images/genome_Quiz.png'); setIsImageModalOpen(true); }}
+                      onKeyDown={(e) => e.key === 'Enter' && (setModalImageSrc('/images/genome_Quiz.png'), setIsImageModalOpen(true))}
+                      role="button"
+                      tabIndex={0}
+                    />
+                  </figure>
+                  <p className="text-body text-neutral-700 leading-relaxed mb-4">
                     เทคโนโลยีนี้ช่วยให้เราสามารถอ่านและวิเคราะห์ข้อมูลพันธุกรรมทั้งหมดของบุคคลได้อย่างครบถ้วน 
                     ซึ่งครอบคลุมประมาณ 3 พันล้านคู่เบสในมนุษย์
                   </p>
+                  <figure className="rounded-lg overflow-hidden border border-neutral-200 shadow-sm max-w-md my-6">
+                    <img
+                      src="/images/genome_search.png"
+                      alt="Genome Search - การค้นหาข้อมูลจีโนม"
+                      className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition"
+                      onClick={() => { setModalImageSrc('/images/genome_search.png'); setIsImageModalOpen(true); }}
+                      onKeyDown={(e) => e.key === 'Enter' && (setModalImageSrc('/images/genome_search.png'), setIsImageModalOpen(true))}
+                      role="button"
+                      tabIndex={0}
+                    />
+                  </figure>
                 </div>
                 
                 <div className="bg-navy-50 p-6 rounded-md">
@@ -330,13 +352,16 @@ export default function GenomeTechnologyPage() {
                   <p className="text-body text-neutral-700 leading-relaxed mb-4">
                     WGS ถูกนำมาใช้ในการแพทย์แม่นยำเพื่อ:
                   </p>
-                  <ul className="space-y-2 text-body text-neutral-700 ml-6">
+                  <ul className="space-y-2 text-body text-neutral-700 ml-6 mb-4">
                     <li className="list-disc">การวินิจฉัยโรคหายากและโรคพันธุกรรม</li>
                     <li className="list-disc">การทำนายความเสี่ยงต่อโรคไม่ติดต่อเรื้อรัง (NCDs)</li>
                     <li className="list-disc">การเลือกยาและปรับขนาดยาตามพันธุกรรม (Pharmacogenomics)</li>
                     <li className="list-disc">การตรวจหามะเร็งและการติดตามการรักษา</li>
                     <li className="list-disc">การวิจัยและค้นพบยีนใหม่ที่เกี่ยวข้องกับโรค</li>
                   </ul>
+                  <p className="text-body text-neutral-700 leading-relaxed">
+                    ข้อมูลจาก WGS มีปริมาณมหาศาล การจะอ่านและวิเคราะห์ด้วยคนอย่างเดียวจึงไม่เพียงพอ ปัจจุบันจึงนำ <strong>ปัญญาประดิษฐ์ (AI)</strong> และ <strong>Machine Learning</strong> มาช่วย ทำให้สามารถคัดกรองความผิดปกติทางพันธุกรรม แปลผล และทำนายความเสี่ยงของโรคได้ เร็วขึ้นและแม่นยำขึ้น กว่าเดิมมาก จึงกลายเป็นเครื่องมือสำคัญของการแพทย์แม่นยำในยุคปัจจุบัน
+                  </p>
                 </div>
               </div>
             </div>
