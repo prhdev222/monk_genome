@@ -494,7 +494,7 @@ export default function MonksPage() {
                   <p className="font-semibold text-neutral-900 mb-2">เหนือกรรม(กรรมเก่า--กรรมใหม่)</p>
                   <div className="aspect-video w-full max-w-sm rounded-md overflow-hidden border border-neutral-200">
                     <iframe
-                      src="https://www.youtube.com/embed/9TaM3jleoTg?start=1"
+                      src="https://www.youtube.com/embed/PyuQGVGXvvs"
                       title="เหนือกรรม (กรรมเก่า--กรรมใหม่)"
                       className="w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
