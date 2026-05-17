@@ -95,6 +95,14 @@ export default function HospitalResearchPage() {
                   >
                     DNALL ดูผลตรวจพันธุกรรม
                   </a>
+                  <a
+                    href="https://dnadash.pages.dev"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-teal-700 underline underline-offset-4 hover:text-teal-600"
+                  >
+                    genomics_results
+                  </a>
                 </div>
               </div>
             )}
