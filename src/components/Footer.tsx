@@ -174,12 +174,22 @@ export default function Footer() {
               <p className="text-neutral-400 text-sm flex items-center">
                 สร้างด้วย <Heart size={16} className="mx-1 text-gold-500" /> ขอให้พระคุณเจ้ามีสุขภาพแข็งแรง
               </p>
-              <a
-                href="/hospital-research"
-                className="text-sm px-4 py-2 rounded-sm border border-neutral-600 text-neutral-200 hover:text-white hover:border-gold-500 transition-colors"
-              >
-                งานวิจัยของรพ.
-              </a>
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <a
+                  href="/hospital-research"
+                  className="text-sm px-4 py-2 rounded-sm border border-neutral-600 text-neutral-200 hover:text-white hover:border-gold-500 transition-colors"
+                >
+                  งานวิจัยของรพ.
+                </a>
+                <a
+                  href="https://dnadash.pages.dev/patient/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm px-4 py-2 rounded-sm border border-neutral-600 text-neutral-200 hover:text-white hover:border-gold-500 transition-colors"
+                >
+                  ค้นหาผลการตรวจงานวิจัย
+                </a>
+              </div>
             </div>
           </div>
         </div>
